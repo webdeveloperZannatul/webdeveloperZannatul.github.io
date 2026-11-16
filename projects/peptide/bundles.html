@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+  <title>Research Bundles & Bulk Orders | Peptide</title>
+  <meta name="description" content="Save up to 50% on curated peptide stacks, research protocol bundles, and high-volume laboratory bulk orders.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/bundles.css">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="64x64" href="images/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+</head>
+<body>
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">
+    <div class="announcement-content">
+      <span class="announcement-text">END OF SUMMER SALE</span>
+      <span class="announcement-highlight">35% Off Sitewide</span>
+      <span class="announcement-label">CODE</span>
+      <span class="announcement-code">HEAT35</span>
+      <span class="announcement-label">ENDS IN</span>
+      <span class="announcement-timer" id="countdown-timer">9d 23h 16m 40s</span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="Peptide Home">
+        <img src="images/LogoMain.svg" alt="Peptide" class="logo-img">
+      </a>
+      <nav class="main-nav" id="main-nav">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="store.html" class="nav-link">Products</a></li>
+          <li class="nav-item"><a href="subscription.html" class="nav-link">Build a Box <span class="nav-badge">NEW</span></a></li>
+          <li class="nav-item"><a href="bundles.html" class="nav-link active">Bulk Orders <span class="nav-badge">NEW</span></a></li>
+          <li class="nav-item"><a href="#" class="nav-link">COAs</a></li>
+          <li class="nav-item"><a href="membership.html" class="nav-link">Membership</a></li>
+          <li class="nav-item"><a href="affiliate.html" class="nav-link">Partner Program</a></li>
+          <li class="nav-item"><a href="bundles.html" class="nav-link active">Research Bundles <span class="nav-badge">NEW</span></a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact us</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button class="header-icon-btn" aria-label="Account">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </button>
+        <button class="header-icon-btn cart-btn" aria-label="Cart">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+          <span class="cart-count">0</span>
+        </button>
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <div class="mobile-menu-inner">
+      <ul class="mobile-nav-list">
+        <li><a href="store.html">Products</a></li>
+        <li><a href="subscription.html">Build a Box</a></li>
+        <li><a href="bundles.html">Bulk Orders</a></li>
+        <li><a href="#">COAs</a></li>
+        <li><a href="membership.html">Membership</a></li>
+        <li><a href="affiliate.html">Partner Program</a></li>
+        <li><a href="bundles.html">Research Bundles</a></li>
+        <li><a href="contact.html">Contact us</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <main>
+    <!-- Bundles Hero -->
+    <section class="bundles-hero">
+      <div class="container">
+        <span class="bundles-hero-tag">RESEARCH BUNDLES &amp; BULK SAVINGS</span>
+        <h1 class="bundles-hero-title">Curated Stacks &amp; Volume Pricing</h1>
+        <p class="bundles-hero-desc">Documented synergy protocols and wholesale bulk rates for laboratory investigation. Save 20% to 50% off standard catalog pricing with complimentary Certificate of Analysis for every vial.</p>
+        
+        <!-- Filter Tabs -->
+        <div class="bundle-filter-bar">
+          <button class="bundle-tab active" data-filter="all">All Bundles</button>
+          <button class="bundle-tab" data-filter="stacks">Curated Stacks</button>
+          <button class="bundle-tab" data-filter="bulk">Volume Bulk (3-6x)</button>
+          <button class="bundle-tab" data-filter="repair">Tissue &amp; Repair</button>
+          <button class="bundle-tab" data-filter="metabolic">Metabolic &amp; Longevity</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bundles Grid -->
+    <section class="bundles-grid-section">
+      <div class="container">
+        <div class="bundles-grid">
+
+          <!-- Wolverine Stack -->
+          <div class="bundle-card featured" data-cat="stacks repair">
+            <div class="bundle-badge-discount">SAVE 25%</div>
+            <div class="bundle-image-area">
+              <img src="images/Boxes.webp" alt="The Wolverine Stack" class="bundle-img">
+            </div>
+            <div class="bundle-content">
+              <div class="bundle-purity-row">
+                <span class="coa-badge">99.8% Purity Pass</span>
+                <span class="bundle-items-count">3 items</span>
+              </div>
+              <h3 class="bundle-title">The Wolverine Protocol Stack</h3>
+              <p class="bundle-desc">Dual synergistic tissue recovery investigation suite featuring BPC-157, TB-500, and premium Amino H2O reconstitution solution.</p>
+              <ul class="bundle-includes">
+                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> 1x BLP-8 (BPC-157) 10mg</li>
+                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> 1x TB-500 5mg</li>
+                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> 1x Amino H2O 30ml Bacteriostatic</li>
+              </ul>
+              <div class="bundle-price-footer">
+                <div>
+                  <span class="bundle-price">$89.99</span>
+                  <span class="bundle-old-price">$119.97</span>
+                </div>
+                <button class="btn btn-dark btn-sm">Add Stack to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Metabolic & Longevity Stack -->
+          <div class="bundle-card" data-cat="stacks metabolic">
+            <div class="bundle-badge-discount">SAVE 30%</div>
+            <div class="bundle-image-area">
+              <img src="images/NADDesktop.webp" alt="Metabolic Protocol" class="bundle-img">
+            </div>
+            <div class="bundle-content">
+              <div class="bundle-purity-row">
+                <span class="coa-badge">99.7% Purity Pass</span>
+                <span class="bundle-items-count">3 items</span>
+              </div>
+              <h3 class="bundle-title">Cellular Longevity &amp; Energy Stack</h3>
+              <p class="bundle-desc">Comprehensive cellular investigation bundle targeting mitochondrial pathways and NAD+ metabolism cofactors.</p>
+              <ul class="bundle-includes">
+                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> 1x NAD+ 500mg Lyophilized</li>
+                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> 1x MOTS-C 10mg Mitochondrial</li>
+                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> 1x Amino H2O 30ml</li>
+              </ul>
+              <div class="bundle-price-footer">
+                <div>
+                  <span class="bundle-price">$99.99</span>
+                  <span class="bundle-old-price">$142.97</span>
+                </div>
+                <button class="btn btn-dark btn-sm">Add Stack to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- BPC-157 3-Pack Bulk -->
+          <div class="bundle-card" data-cat="bulk repair">
+            <div class="bundle-badge-discount gold">40% OFF BULK</div>
+            <div class="bundle-image-area">
+              <img src="images/BPC157.webp" alt="BPC-157 3-pack" class="bundle-img">
+            </div>
+            <div class="bundle-content">
+              <div class="bundle-purity-row">
+                <span class="coa-badge">99.8% Purity Pass</span>
+                <span class="bundle-items-count">3 vials</span>
+              </div>
+              <h3 class="bundle-title">BPC-157 (10mg) — 3-Pack Bulk</h3>
+              <p class="bundle-desc">High volume laboratory supply. Save 40% when purchasing standard research multi-packs.</p>
+              <ul class="bundle-includes">
+                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> 3x BLP-8 (BPC-157) 10mg Vials</li>
+                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Individual CoAs Included</li>
+              </ul>
+              <div class="bundle-price-footer">
+                <div>
+                  <span class="bundle-price">$89.98</span>
+                  <span class="bundle-old-price">$149.97</span>
+                </div>
+                <button class="btn btn-dark btn-sm">Add 3-Pack</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- BPC-157 6-Pack Wholesale -->
+          <div class="bundle-card" data-cat="bulk repair">
+            <div class="bundle-badge-discount gold">50% OFF BULK</div>
+            <div class="bundle-image-area">
+              <img src="images/BPC157Desktop.webp" alt="BPC-157 6-pack" class="bundle-img">
+            </div>
+            <div class="bundle-content">
+              <div class="bundle-purity-row">
+                <span class="coa-badge">99.8% Purity Pass</span>
+                <span class="bundle-items-count">6 vials</span>
+              </div>
+              <h3 class="bundle-title">BPC-157 (10mg) — 6-Pack Bulk</h3>
+              <p class="bundle-desc">Maximum laboratory discount. 50% off retail pricing with free priority 2-day delivery.</p>
+              <ul class="bundle-includes">
+                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> 6x BLP-8 (BPC-157) 10mg Vials</li>
+                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Free Insured Cold Shipping</li>
+              </ul>
+              <div class="bundle-price-footer">
+                <div>
+                  <span class="bundle-price">$149.97</span>
+                  <span class="bundle-old-price">$299.94</span>
+                </div>
+                <button class="btn btn-dark btn-sm">Add 6-Pack</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- TB-500 3-Pack Bulk -->
+          <div class="bundle-card" data-cat="bulk repair">
+            <div class="bundle-badge-discount gold">40% OFF BULK</div>
+            <div class="bundle-image-area">
+              <img src="images/TB500.webp" alt="TB-500 3-pack" class="bundle-img">
+            </div>
+            <div class="bundle-content">
+              <div class="bundle-purity-row">
+                <span class="coa-badge">99.5% Purity Pass</span>
+                <span class="bundle-items-count">3 vials</span>
+              </div>
+              <h3 class="bundle-title">TB-500 (5mg) — 3-Pack Bulk</h3>
+              <p class="bundle-desc">Save 40% on standard 3-unit lab volume orders of verified TB-500 thymosin fraction.</p>
+              <ul class="bundle-includes">
+                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> 3x TB-500 5mg Lyophilized Vials</li>
+                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Third-Party HPLC Verified</li>
+              </ul>
+              <div class="bundle-price-footer">
+                <div>
+                  <span class="bundle-price">$71.98</span>
+                  <span class="bundle-old-price">$119.97</span>
+                </div>
+                <button class="btn btn-dark btn-sm">Add 3-Pack</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Neuropeptide Trio -->
+          <div class="bundle-card" data-cat="stacks">
+            <div class="bundle-badge-discount">SAVE 25%</div>
+            <div class="bundle-image-area">
+              <img src="images/DSIP.jpg" alt="Neuropeptide Trio" class="bundle-img">
+            </div>
+            <div class="bundle-content">
+              <div class="bundle-purity-row">
+                <span class="coa-badge">99.6% Purity Pass</span>
+                <span class="bundle-items-count">3 items</span>
+              </div>
+              <h3 class="bundle-title">Neuro &amp; Circadian Investigation Trio</h3>
+              <p class="bundle-desc">Complete cognitive peptide package containing SEMAX, SELANK, and DSIP research compounds.</p>
+              <ul class="bundle-includes">
+                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> 1x SEMAX 10mg</li>
+                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> 1x SELANK 10mg</li>
+                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> 1x DSIP 5mg Circadian</li>
+              </ul>
+              <div class="bundle-price-footer">
+                <div>
+                  <span class="bundle-price">$79.99</span>
+                  <span class="bundle-old-price">$104.97</span>
+                </div>
+                <button class="btn btn-dark btn-sm">Add Stack to Cart</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Order Bulk Section -->
+    <section class="bulk-benefits-section">
+      <div class="container">
+        <h2 class="section-center-title">Why Laboratories Order in Bulk from Peptide</h2>
+        <div class="bulk-benefits-grid">
+          <div class="b-benefit-card">
+            <div class="b-benefit-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <h4>Same Batch Identity</h4>
+            <p>Every vial in your bulk order originates from the exact same production lot with matching HPLC and Mass Spec profiles.</p>
+          </div>
+          <div class="b-benefit-card">
+            <div class="b-benefit-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16,8 20,8 23,11 23,16 16,16 16,8"/></svg>
+            </div>
+            <h4>Complimentary Cold Packing</h4>
+            <p>Orders over 3 units receive insulated temperature-regulated transit packaging with expedited carrier priority.</p>
+          </div>
+          <div class="b-benefit-card">
+            <div class="b-benefit-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h4>Guaranteed Replacements</h4>
+            <p>Full transit loss and damage coverage with same-day reshipment on all volume and stack purchases.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-main">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <img src="images/LogoWhite.svg" alt="Peptide" class="footer-logo">
+            <p class="footer-brand-desc">Premium research-grade peptides for controlled laboratory studies. Third-party tested with Certificate of Analysis.</p>
+            <div class="footer-social">
+              <a href="#" class="social-link" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/></svg></a>
+              <a href="#" class="social-link" aria-label="X"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+              <a href="#" class="social-link" aria-label="YouTube"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33A2.78 2.78 0 003.4 19.13C5.12 19.5 12 19.5 12 19.5s6.88 0 8.6-.46a2.78 2.78 0 001.94-1.93 29 29 0 00.46-5.25 29 29 0 00-.46-5.44z"/><polygon points="9.75,15.02 15.5,11.75 9.75,8.48"/></svg></a>
+            </div>
+          </div>
+          <div class="footer-links-col"><h4 class="footer-heading">SHOP</h4><ul class="footer-link-list"><li><a href="store.html">All Products</a></li><li><a href="subscription.html">Build a Box <span class="nav-badge-sm">NEW</span></a></li><li><a href="bundles.html">Bulk Orders <span class="nav-badge-sm">NEW</span></a></li></ul></div>
+          <div class="footer-links-col"><h4 class="footer-heading">RESOURCES</h4><ul class="footer-link-list"><li><a href="#">Certificates of Analysis</a></li></ul></div>
+          <div class="footer-links-col"><h4 class="footer-heading">SUPPORT</h4><ul class="footer-link-list"><li><a href="contact.html">Contact Us</a></li><li><a href="contact.html">FAQ</a></li><li><a href="#">Shipping Info</a></li><li><a href="#">Returns & Refunds</a></li></ul></div>
+          <div class="footer-links-col"><h4 class="footer-heading">LEGAL</h4><ul class="footer-link-list"><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms of Service</a></li><li><a href="#">Affiliate Terms</a></li><li><a href="#">Disclaimer</a></li><li><a href="#">Research Use Only</a></li></ul></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-disclaimer"><div class="container"><div class="disclaimer-header"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg><strong>FDA DISCLAIMER</strong></div><p class="disclaimer-text">Statements made regarding our products have <strong>not been evaluated by the U.S. Food and Drug Administration</strong>. These products are <strong>not intended to diagnose, treat, cure, or prevent any disease</strong>. <a href="#">Read the full disclaimer →</a></p></div></div>
+    <div class="footer-bottom"><div class="container"><div class="footer-bottom-inner"><div class="footer-payment"><span>We accept:</span><div class="payment-icons"><span class="payment-icon">VISA</span><span class="payment-icon">MC</span><span class="payment-icon">AMEX</span><span class="payment-icon">GPay</span></div></div><p class="footer-copyright">&copy; 2026 Peptide. All rights reserved. Developed by Zannatul.</p><div class="footer-trust-badges"><span class="trust-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg> SSL Secured</span><span class="trust-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg> 99%+ Purity</span><span class="trust-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Shipment Protection</span></div></div></div></div>
+  </footer>
+  <script src="js/main.js"></script>
+  <script>
+    // Tab filtering for bundles
+    document.querySelectorAll('.bundle-tab').forEach(tab => {
+      tab.addEventListener('click', function() {
+        document.querySelectorAll('.bundle-tab').forEach(t => t.classList.remove('active'));
+        this.classList.add('active');
+        const filter = this.dataset.filter;
+        document.querySelectorAll('.bundle-card').forEach(card => {
+          const cat = card.dataset.cat || '';
+          if (filter === 'all' || cat.includes(filter)) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

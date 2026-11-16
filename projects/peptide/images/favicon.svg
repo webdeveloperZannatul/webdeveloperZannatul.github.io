@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Rounded Navy Background -->
+  <rect width="64" height="64" rx="14" fill="#0A192F"/>
+  <rect x="1.5" y="1.5" width="61" height="61" rx="12.5" stroke="#10B981" stroke-width="1" stroke-opacity="0.3"/>
+
+  <!-- Stylized Lettermark 'P' -->
+  <!-- Stem -->
+  <rect x="18" y="14" width="7.5" height="36" rx="2.5" fill="#FFFFFF"/>
+  
+  <!-- Loop / Emerald Molecular Arc -->
+  <path d="M25 14H35C42.1797 14 48 19.8203 48 27C48 34.1797 42.1797 40 35 40H25" stroke="#10B981" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Molecular Nodes / Atoms -->
+  <circle cx="35" cy="14" r="4" fill="#34D399"/>
+  <circle cx="48" cy="27" r="4.5" fill="#34D399"/>
+  <circle cx="35" cy="40" r="4" fill="#34D399"/>
+  <circle cx="22" cy="14" r="3" fill="#FFFFFF"/>
+  <circle cx="22" cy="50" r="3" fill="#FFFFFF"/>
+
+  <!-- Inner Node Highlights -->
+  <circle cx="48" cy="27" r="2" fill="#FFFFFF"/>
+  
+  <!-- Small Hexagon Accent -->
+  <path d="M46 47L50 49.3V54L46 56.3L42 54V49.3L46 47Z" fill="#10B981" stroke="#34D399" stroke-width="1"/>
+</svg>

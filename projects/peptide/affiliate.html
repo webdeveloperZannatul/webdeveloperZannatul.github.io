@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+  <title>Partner Program &amp; Research Referrals | Peptide</title>
+  <meta name="description" content="Earn 20% on first orders and 10% lifetime recurring commissions by referring researchers and laboratories to Peptide.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/affiliate.css">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="64x64" href="images/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+</head>
+<body>
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">
+    <div class="announcement-content">
+      <span class="announcement-text">END OF SUMMER SALE</span>
+      <span class="announcement-highlight">35% Off Sitewide</span>
+      <span class="announcement-label">CODE</span>
+      <span class="announcement-code">HEAT35</span>
+      <span class="announcement-label">ENDS IN</span>
+      <span class="announcement-timer" id="countdown-timer">9d 23h 16m 40s</span>
+    </div>
+    <div class="announcement-sun"><img src="images/image (8).svg" alt="" aria-hidden="true" class="sun-icon"></div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="Peptide Home">
+        <img src="images/LogoMain.svg" alt="Peptide" class="logo-img">
+      </a>
+      <nav class="main-nav" id="main-nav">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="store.html" class="nav-link">Products</a></li>
+          <li class="nav-item"><a href="subscription.html" class="nav-link">Build a Box <span class="nav-badge">NEW</span></a></li>
+          <li class="nav-item"><a href="bundles.html" class="nav-link">Bulk Orders <span class="nav-badge">NEW</span></a></li>
+          <li class="nav-item"><a href="#" class="nav-link">COAs</a></li>
+          <li class="nav-item"><a href="membership.html" class="nav-link">Membership</a></li>
+          <li class="nav-item"><a href="affiliate.html" class="nav-link active">Partner Program</a></li>
+          <li class="nav-item"><a href="bundles.html" class="nav-link">Research Bundles <span class="nav-badge">NEW</span></a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact us</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button class="header-icon-btn" aria-label="Account">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </button>
+        <button class="header-icon-btn cart-btn" aria-label="Cart">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+          <span class="cart-count">0</span>
+        </button>
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <div class="mobile-menu-inner">
+      <ul class="mobile-nav-list">
+        <li><a href="store.html">Products</a></li>
+        <li><a href="subscription.html">Build a Box</a></li>
+        <li><a href="bundles.html">Bulk Orders</a></li>
+        <li><a href="#">COAs</a></li>
+        <li><a href="membership.html">Membership</a></li>
+        <li><a href="affiliate.html">Partner Program</a></li>
+        <li><a href="bundles.html">Research Bundles</a></li>
+        <li><a href="contact.html">Contact us</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <main>
+    <!-- Affiliate Hero -->
+    <section class="affiliate-hero">
+      <div class="container">
+        <div class="affiliate-hero-grid">
+          <div class="aff-hero-content">
+            <h1 class="aff-hero-title">Help researchers find quality supply</h1>
+            <p class="aff-hero-subtitle">Refer colleagues, labs, or research teams to Peptide. Share a trusted source; share in the value.</p>
+            
+            <div class="aff-stats-row">
+              <div class="aff-stat-col">
+                <div class="aff-stat-val">20%</div>
+                <div class="aff-stat-sub">First order commission</div>
+              </div>
+              <div class="aff-stat-col">
+                <div class="aff-stat-val">10%</div>
+                <div class="aff-stat-sub">Lifetime recurring</div>
+              </div>
+              <div class="aff-stat-col">
+                <div class="aff-stat-val">30 days</div>
+                <div class="aff-stat-sub">Cookie window</div>
+              </div>
+              <div class="aff-stat-col">
+                <div class="aff-stat-val">Monthly</div>
+                <div class="aff-stat-sub">Payouts via bank deposit</div>
+              </div>
+            </div>
+
+            <a href="#apply" class="btn btn-dark btn-lg">Apply as a Referral Partner →</a>
+          </div>
+
+          <!-- Hero Graphic Card -->
+          <div class="aff-hero-card-wrap">
+            <img src="images/BPC157.webp" alt="Vial" class="floating-vial aff-v1">
+            <img src="images/TB500.webp" alt="Vial" class="floating-vial aff-v2">
+            <img src="images/NAD.webp" alt="Vial" class="floating-vial aff-v3">
+            <div class="aff-example-calc-card">
+              <span class="calc-label">Example monthly referral value</span>
+              <div class="calc-total">$1,250</div>
+              <div class="calc-line">
+                <span>10 referrals</span>
+                <span class="calc-green">+$500</span>
+              </div>
+              <div class="calc-line">
+                <span>Recurring</span>
+                <span class="calc-green">+$750</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Built for Research Referrals -->
+    <section class="built-for-refs-section">
+      <div class="container">
+        <h2 class="section-center-title">Built for research referrals</h2>
+        <p class="section-center-desc">Help researchers find a supply chain with the documentation they need</p>
+        
+        <div class="ref-pillars-grid">
+          <div class="ref-pillar">
+            <div class="ref-pillar-val">20%</div>
+            <strong>First Order</strong>
+            <p>Referral value on new researchers</p>
+          </div>
+          <div class="ref-pillar">
+            <div class="ref-pillar-val">10%</div>
+            <strong>Recurring</strong>
+            <p>On every reorder</p>
+          </div>
+          <div class="ref-pillar">
+            <div class="ref-pillar-val">99%+</div>
+            <strong>Purity</strong>
+            <p>Third-party identity tested</p>
+          </div>
+          <div class="ref-pillar">
+            <div class="ref-pillar-val">CoA</div>
+            <strong>Every Batch</strong>
+            <p>Certificate of Analysis</p>
+          </div>
+        </div>
+
+        <div class="ref-subpillars-row">
+          <div class="subpillar-card">
+            <h4>Research-grade supply</h4>
+            <p>Consistent quality and documented batch records for reproducible research</p>
+          </div>
+          <div class="subpillar-card">
+            <h4>Simple to share</h4>
+            <p>Get a unique referral link to share with researchers, colleagues, or labs</p>
+          </div>
+          <div class="subpillar-card">
+            <h4>Real-time tracking</h4>
+            <p>Monitor referrals and referral value in your partner dashboard</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works 4-Step -->
+    <section class="how-it-works-section">
+      <div class="container">
+        <h2 class="section-center-title">How it works</h2>
+        <p class="section-center-desc">A simple four-step process for referring researchers to quality supply</p>
+        
+        <div class="aff-steps-grid">
+          <div class="aff-step-card">
+            <div class="aff-step-num">01</div>
+            <h4>Apply</h4>
+            <p>Create your account and get a unique referral code for sharing with researchers and labs</p>
+          </div>
+          <div class="aff-step-card">
+            <div class="aff-step-num">02</div>
+            <h4>Refer</h4>
+            <p>Share your referral link with researchers, colleagues, or research teams who need quality supply</p>
+          </div>
+          <div class="aff-step-card">
+            <div class="aff-step-num">03</div>
+            <h4>Share in the value</h4>
+            <p>Receive 20% on first orders and 10% on recurring orders from researchers you refer</p>
+          </div>
+          <div class="aff-step-card">
+            <div class="aff-step-num">04</div>
+            <h4>Get paid</h4>
+            <p>Payouts start on the 1st for the previous month's delivered orders</p>
+          </div>
+        </div>
+
+        <!-- Calc Box Detail -->
+        <div class="aff-calc-detail-box">
+          <div class="calc-box-title">Example referral value</div>
+          <div class="calc-box-row">
+            <span>10 new researchers × $250</span>
+            <strong>$500</strong>
+          </div>
+          <div class="calc-box-row">
+            <span>50 recurring orders × $150</span>
+            <strong>$750</strong>
+          </div>
+          <div class="calc-box-total-row">
+            <span>Monthly referral value</span>
+            <strong>$1,250</strong>
+          </div>
+          <div class="calc-box-footer-note">Based on average referral partner activity</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Refer Researchers to Us -->
+    <section class="why-refer-section">
+      <div class="container">
+        <h2 class="section-center-title">Why refer researchers to us</h2>
+        <p class="section-center-desc">A quality supply chain with the documentation researchers expect</p>
+        
+        <div class="why-refer-grid">
+          <div class="why-refer-card">
+            <h4>Documented quality</h4>
+            <p>Certificate of Analysis with every batch. Third-party identity tested at accredited U.S. laboratories.</p>
+          </div>
+          <div class="why-refer-card">
+            <h4>99%+ identity purity</h4>
+            <p>A full 8-assay panel at an ISO 17025 accredited lab on every batch for consistent research results.</p>
+          </div>
+          <div class="why-refer-card">
+            <h4>Reliable fulfillment</h4>
+            <p>Fast processing with free shipment protection ensures research timelines stay on track.</p>
+          </div>
+          <div class="why-refer-card">
+            <h4>30-day referral window</h4>
+            <p>Long attribution period ensures you get credit for researchers who take time to evaluate.</p>
+          </div>
+          <div class="why-refer-card">
+            <h4>Recurring on reorders</h4>
+            <p>10% on every subsequent order from researchers you refer, for the lifetime of their account.</p>
+          </div>
+          <div class="why-refer-card">
+            <h4>Quick approval</h4>
+            <p>Get started immediately with your unique referral code — no waiting period.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Simple, Transparent Referral Value -->
+    <section class="transparent-val-section">
+      <div class="container">
+        <h2 class="section-center-title">Simple, transparent referral value</h2>
+        <p class="section-center-desc">No hidden fees, $1 minimum payout, just straightforward referral value sharing</p>
+        
+        <div class="commission-duo-grid">
+          <div class="comm-box">
+            <div class="comm-big-num">20%</div>
+            <h3>First Order Commission</h3>
+            <p class="comm-box-sub">Receive value on every researcher's first order. Referred researchers and labs also get 20% off.</p>
+            <ul class="comm-bullets">
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Researcher gets 20% off first order</li>
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Average order: $250</li>
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Average referral value: $50</li>
+            </ul>
+          </div>
+          
+          <div class="comm-box">
+            <div class="comm-big-num">10%</div>
+            <h3>Lifetime Recurring</h3>
+            <p class="comm-box-sub">10% on every reorder from researchers you refer, for the lifetime of their account.</p>
+            <ul class="comm-bullets">
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> No time limit</li>
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> High researcher reorder rate</li>
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Recurring on every reorder</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="comm-sub-badges">
+          <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Monthly payouts</span>
+          <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg> $1 minimum</span>
+          <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> 14-day approval</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Partner FAQ -->
+    <section class="aff-faq-section">
+      <div class="container">
+        <div class="faq-header">
+          <h2 class="faq-title">Frequently asked questions</h2>
+        </div>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>How does the referral value work?</span>
+              <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-answer"><p>You receive 20% on a referred researcher's first order and 10% on their subsequent orders placed with your code or with no other discount code applied. Orders redeemed with a non-partner discount code are not eligible for referral value. There's no cap and no limit on how many researchers or labs you can refer.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>How and when do I get paid?</span>
+              <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-answer"><p>Payouts are issued monthly on the 1st via direct bank deposit (ACH), Wire, or PayPal once your balance meets the $1 minimum threshold.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>What does the researcher receive?</span>
+              <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-answer"><p>Referred researchers and institutions get an automatic 20% discount on their initial order when using your partner referral code.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>How long does the referral tracking window last?</span>
+              <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-answer"><p>We maintain a 30-day tracking cookie window. If the researcher places an order within 30 days of clicking your link, the referral is credited to your account.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Who is this program for?</span>
+              <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-answer"><p>This program is designed for lab directors, independent researchers, research communicators, life sciences consultants, and educational platforms.</p></div>
+          </div>
+        </div>
+        <div class="contact-partner-help">
+          <span>Still have questions?</span>
+          <a href="contact.html">Contact our partner team</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Partner CTA -->
+    <section class="partner-cta-bottom" id="apply">
+      <div class="container">
+        <div class="partner-cta-box">
+          <img src="images/BPC157.webp" alt="vial" class="p-cta-vial-left">
+          <div class="p-cta-inner">
+            <h2>Refer researchers to <span class="accent-underline">Peptide</span> as a referral partner.</h2>
+            <p>Help researchers find a trusted supply chain with documented quality</p>
+            <button class="btn btn-dark btn-lg">Become a Partner →</button>
+            <div class="p-cta-checks">
+              <span>✓ Free to join</span>
+              <span>✓ $1 minimum payout</span>
+              <span>✓ Instant approval</span>
+            </div>
+          </div>
+          <img src="images/NAD.webp" alt="vial" class="p-cta-vial-right">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-main">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <img src="images/LogoWhite.svg" alt="Peptide" class="footer-logo">
+            <p class="footer-brand-desc">Premium research-grade peptides for controlled laboratory studies. Third-party tested with Certificate of Analysis.</p>
+            <div class="footer-social">
+              <a href="#" class="social-link" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/></svg></a>
+              <a href="#" class="social-link" aria-label="X"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+              <a href="#" class="social-link" aria-label="YouTube"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33A2.78 2.78 0 003.4 19.13C5.12 19.5 12 19.5 12 19.5s6.88 0 8.6-.46a2.78 2.78 0 001.94-1.93 29 29 0 00.46-5.25 29 29 0 00-.46-5.44z"/><polygon points="9.75,15.02 15.5,11.75 9.75,8.48"/></svg></a>
+            </div>
+          </div>
+          <div class="footer-links-col"><h4 class="footer-heading">SHOP</h4><ul class="footer-link-list"><li><a href="store.html">All Products</a></li><li><a href="subscription.html">Build a Box <span class="nav-badge-sm">NEW</span></a></li><li><a href="bundles.html">Bulk Orders <span class="nav-badge-sm">NEW</span></a></li></ul></div>
+          <div class="footer-links-col"><h4 class="footer-heading">RESOURCES</h4><ul class="footer-link-list"><li><a href="#">Certificates of Analysis</a></li></ul></div>
+          <div class="footer-links-col"><h4 class="footer-heading">SUPPORT</h4><ul class="footer-link-list"><li><a href="contact.html">Contact Us</a></li><li><a href="contact.html">FAQ</a></li><li><a href="#">Shipping Info</a></li><li><a href="#">Returns & Refunds</a></li></ul></div>
+          <div class="footer-links-col"><h4 class="footer-heading">LEGAL</h4><ul class="footer-link-list"><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms of Service</a></li><li><a href="#">Affiliate Terms</a></li><li><a href="#">Disclaimer</a></li><li><a href="#">Research Use Only</a></li></ul></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-disclaimer"><div class="container"><div class="disclaimer-header"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg><strong>FDA DISCLAIMER</strong></div><p class="disclaimer-text">Statements made regarding our products have <strong>not been evaluated by the U.S. Food and Drug Administration</strong>. These products are <strong>not intended to diagnose, treat, cure, or prevent any disease</strong>. <a href="#">Read the full disclaimer →</a></p></div></div>
+    <div class="footer-bottom"><div class="container"><div class="footer-bottom-inner"><div class="footer-payment"><span>We accept:</span><div class="payment-icons"><span class="payment-icon">VISA</span><span class="payment-icon">MC</span><span class="payment-icon">AMEX</span><span class="payment-icon">GPay</span></div></div><p class="footer-copyright">&copy; 2026 Peptide. All rights reserved. Developed by Zannatul.</p><div class="footer-trust-badges"><span class="trust-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg> SSL Secured</span><span class="trust-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg> 99%+ Purity</span><span class="trust-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Shipment Protection</span></div></div></div></div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>
+
+

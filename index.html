@@ -1,0 +1,1852 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zannatul Ferdousi - Web Designer &amp; WordPress Developer | Portfolio Showcase</title>
+  <meta name="description" content="Portfolio showcase of 86 web design, dynamic web applications, and WordPress solutions crafted by Zannatul Ferdousi.">
+  <meta name="author" content="Zannatul Ferdousi">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="alternate icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b0f19;
+      --card-bg: #111827;
+      --card-border: #1f2937;
+      --primary: #38bdf8;
+      --primary-hover: #0284c7;
+      --accent: #10b981;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --badge-bg: #1e293b;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    header {
+      padding: 4rem 1.5rem 2.5rem;
+      text-align: center;
+      background: radial-gradient(circle at top, #1e293b 0%, #0b0f19 70%);
+      border-bottom: 1px solid var(--card-border);
+    }
+    .header-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.35rem 1rem;
+      background: rgba(56, 189, 248, 0.1);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      color: var(--primary);
+      border-radius: 9999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 1.25rem;
+    }
+    h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      margin-bottom: 1rem;
+      background: linear-gradient(135deg, #ffffff 40%, var(--primary) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    p.subtitle {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      max-width: 720px;
+      margin: 0 auto 2rem;
+    }
+    .stats-bar {
+      display: flex;
+      justify-content: center;
+      gap: 2.5rem;
+      flex-wrap: wrap;
+      margin-top: 1.5rem;
+    }
+    .stat-item {
+      text-align: center;
+    }
+    .stat-val {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--text);
+      font-family: 'Space Grotesk', sans-serif;
+    }
+    .stat-lbl {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    main {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+    }
+    .controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+    .filters {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+    .filter-btn {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      color: var(--text-muted);
+      padding: 0.5rem 1.15rem;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      showcase: pointer;
+      transition: all 0.2s;
+    }
+    .filter-btn:hover, .filter-btn.active {
+      background: var(--primary);
+      color: #0b0f19;
+      border-color: var(--primary);
+    }
+    .search-box {
+      position: relative;
+      min-width: 280px;
+    }
+    .search-box input {
+      width: 100%;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      padding: 0.65rem 1rem 0.65rem 2.5rem;
+      color: var(--text);
+      font-size: 0.95rem;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .search-box input:focus {
+      border-color: var(--primary);
+    }
+    .search-icon {
+      position: absolute;
+      left: 0.85rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+      pointer-events: none;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+      gap: 2rem;
+    }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(56, 189, 248, 0.4);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+    }
+    .card-img-wrap {
+      position: relative;
+      width: 100%;
+      height: 220px;
+      background: #0f172a;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .card-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s;
+    }
+    .card:hover .card-img-wrap img {
+      transform: scale(1.03);
+    }
+    .card-status {
+      position: absolute;
+      top: 0.85rem;
+      right: 0.85rem;
+      padding: 0.25rem 0.65rem;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .status-live {
+      background: rgba(16, 185, 129, 0.9);
+      color: #ffffff;
+      box-shadow: 0 2px 8px rgba(16, 185, 129, 0.4);
+    }
+    .status-showcase {
+      background: rgba(30, 41, 59, 0.85);
+      color: #94a3b8;
+      border: 1px solid var(--card-border);
+    }
+    .card-content {
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    .card-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.6rem;
+      color: var(--text);
+    }
+    .card-desc {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      margin-bottom: 1.25rem;
+      flex-grow: 1;
+    }
+    .card-tags {
+      display: flex;
+      gap: 0.4rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.25rem;
+    }
+    .tag {
+      background: var(--badge-bg);
+      color: #cbd5e1;
+      padding: 0.2rem 0.6rem;
+      border-radius: 6px;
+      font-size: 0.78rem;
+      font-weight: 500;
+    }
+    .card-actions {
+      display: flex;
+      gap: 0.75rem;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s;
+      showcase: pointer;
+      border: none;
+    }
+    .btn-primary {
+      background: var(--primary);
+      color: #0b0f19;
+      flex: 1;
+    }
+    .btn-primary:hover {
+      background: var(--primary-hover);
+    }
+    .btn-secondary {
+      background: #1e293b;
+      color: #cbd5e1;
+      flex: 1;
+    }
+    .btn-secondary:hover {
+      background: #334155;
+      color: #ffffff;
+    }
+    footer {
+      text-align: center;
+      padding: 3rem 1.5rem;
+      border-top: 1px solid var(--card-border);
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+    footer a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-badge">🚀 Portfolio &amp; Technical Showcase</div>
+    <h1>Zannatul Ferdousi - Web Designer &amp; WordPress Developer</h1>
+    <p class="subtitle">A curated portfolio of 86 production websites, bespoke WordPress themes, responsive web applications, and modern UI/UX design systems.</p>
+    <div class="stats-bar">
+      <div class="stat-item">
+        <div class="stat-val">86</div>
+        <div class="stat-lbl">Projects Showcased</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-val">8</div>
+        <div class="stat-lbl">Interactive Live Apps</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-val">9+</div>
+        <div class="stat-lbl">Years Experience</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-val">100%</div>
+        <div class="stat-lbl">On-Time Delivery</div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="controls">
+      <div class="filters">
+        <button class="filter-btn active" data-filter="all">All Projects (86)</button>
+        <button class="filter-btn" data-filter="live">⚡ Live Demos (8)</button>
+        <button class="filter-btn" data-filter="Web Apps &amp; SaaS">Web Apps &amp; SaaS</button>
+        <button class="filter-btn" data-filter="WordPress">WordPress</button>
+        <button class="filter-btn" data-filter="E-Commerce">E-Commerce</button>
+        <button class="filter-btn" data-filter="UI/UX &amp; Landing">UI/UX &amp; Design</button>
+      </div>
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="searchInput" placeholder="Search projects or tech stack...">
+      </div>
+    </div>
+
+    <div class="grid" id="projectsGrid">
+      
+      <div class="card" id="craft-and-connect-pro" data-category="E-Commerce" data-live="false" data-search="craft and connect pro react typescript vite tailwind css shadcn ui khizana is an end-to-end digital planning, estimation, and design platform tailored for bespoke wardrobe manufacturers, carpenters, and cabinetry workshops.">
+        <div class="card-img-wrap">
+          <img src="screenshots/craft-and-connect-pro.png" alt="Craft And Connect Pro" loading="lazy">
+          <span class="card-status status-showcase">Showcase</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Craft And Connect Pro</h2>
+          <p class="card-desc">Khizana is an end-to-end digital planning, estimation, and design platform tailored for bespoke wardrobe manufacturers, carpenters, and cabinetry workshops.</p>
+          <div class="card-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card-actions">
+            <a href="#craft-and-connect-pro" class="btn btn-secondary">Project Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="media-rich-web-stories" data-category="UI/UX & Landing" data-live="false" data-search="media rich web stories react typescript vite tailwind css shadcn ui build this according the prd, use suitable image and video's , header, footer details.">
+        <div class="card-img-wrap">
+          <img src="screenshots/media-rich-web-stories.png" alt="Media Rich Web Stories" loading="lazy">
+          <span class="card-status status-showcase">Showcase</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Media Rich Web Stories</h2>
+          <p class="card-desc">A responsive, high-performance web platform featuring modern UI/UX design, interactive layouts, and scalable architecture built with React, TypeScript, Vite.</p>
+          <div class="card-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card-actions">
+            <a href="#media-rich-web-stories" class="btn btn-secondary">Project Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="eigenkern-visual-experience" data-category="UI/UX & Landing" data-live="false" data-search="eigenkern visual experience react typescript vite tailwind css shadcn ui please also include hero section background image and all related section suitable images, videos(vedio's collect from this wesite:www.eigenkern.de, one vedio link: https://yout...">
+        <div class="card-img-wrap">
+          <img src="screenshots/eigenkern-visual-experience.svg" alt="Eigenkern Visual Experience" loading="lazy">
+          <span class="card-status status-showcase">Showcase</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Eigenkern Visual Experience</h2>
+          <p class="card-desc">please also include hero section background image and all related section suitable images, videos(vedio's collect from this wesite:www.eigenkern.de, one vedio link: https://youtu.be/f-j1p...</p>
+          <div class="card-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card-actions">
+            <a href="#eigenkern-visual-experience" class="btn btn-secondary">Project Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="dynamic-brand-showcase" data-category="UI/UX & Landing" data-live="false" data-search="dynamic brand showcase react typescript vite tailwind css shadcn ui please follow clients all requirements, create this attractive and dynamic, header 7 footer details with attractive logo.">
+        <div class="card-img-wrap">
+          <img src="screenshots/dynamic-brand-showcase.svg" alt="Dynamic Brand Showcase" loading="lazy">
+          <span class="card-status status-showcase">Showcase</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Dynamic Brand Showcase</h2>
+          <p class="card-desc">A responsive, high-performance web platform featuring modern UI/UX design, interactive layouts, and scalable architecture built with React, TypeScript, Vite.</p>
+          <div class="card-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card-actions">
+            <a href="#dynamic-brand-showcase" class="btn btn-secondary">Project Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="pixel-perfect-replica" data-category="UI/UX & Landing" data-live="false" data-search="pixel perfect replica react typescript vite tailwind css shadcn ui implement exactly the screenshot and nothing else">
+        <div class="card-img-wrap">
+          <img src="screenshots/pixel-perfect-replica.png" alt="Pixel Perfect Replica" loading="lazy">
+          <span class="card-status status-showcase">Showcase</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Pixel Perfect Replica</h2>
+          <p class="card-desc">A responsive, high-performance web platform featuring modern UI/UX design, interactive layouts, and scalable architecture built with React, TypeScript, Vite.</p>
+          <div class="card-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card-actions">
+            <a href="#pixel-perfect-replica" class="btn btn-secondary">Project Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="the-five-trip-journal" data-category="UI/UX & Landing" data-live="false" data-search="the five trip journal react typescript vite tailwind css shadcn ui build the website according the prd, use required high quality image, resource can extract from the website the5trip.com .">
+        <div class="card-img-wrap">
+          <img src="screenshots/the-five-trip-journal.png" alt="The Five Trip Journal" loading="lazy">
+          <span class="card-status status-showcase">Showcase</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">The Five Trip Journal</h2>
+          <p class="card-desc">A responsive, high-performance web platform featuring modern UI/UX design, interactive layouts, and scalable architecture built with React, TypeScript, Vite.</p>
+          <div class="card-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card-actions">
+            <a href="#the-five-trip-journal" class="btn btn-secondary">Project Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="exclusive-vision-studio" data-category="UI/UX & Landing" data-live="false" data-search="exclusive vision studio react typescript vite tailwind css shadcn ui bulild with exclusive and desired image">
+        <div class="card-img-wrap">
+          <img src="screenshots/exclusive-vision-studio.png" alt="Exclusive Vision Studio" loading="lazy">
+          <span class="card-status status-showcase">Showcase</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Exclusive Vision Studio</h2>
+          <p class="card-desc">Bulild with exclusive and desired image</p>
+          <div class="card-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card-actions">
+            <a href="#exclusive-vision-studio" class="btn btn-secondary">Project Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="lightlink-pro" data-category="UI/UX & Landing" data-live="false" data-search="lightlink pro react typescript vite tailwind css shadcn ui create a premium, high-converting, mobile-first lead-generation landing page for led solutions canberra (ledsolutions.com.au), using the provided current website screenshot as t...">
+        <div class="card-img-wrap">
+          <img src="screenshots/lightlink-pro.svg" alt="Lightlink Pro" loading="lazy">
+          <span class="card-status status-showcase">Showcase</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Lightlink Pro</h2>
+          <p class="card-desc">Create a premium, high-converting, mobile-first lead-generation landing page for LED Solutions Canberra (LEDsolutions.com.au), using the provided current website screenshot as the visual...</p>
+          <div class="card-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card-actions">
+            <a href="#lightlink-pro" class="btn btn-secondary">Project Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="summit-personal-growth" data-category="Web Apps & SaaS" data-live="false" data-search="summit personal growth react typescript vite tailwind css shadcn ui act as a senior saas product designer and ui/ux strategist. redesign evolmeo.ai, an enterprise conversational ai coaching and personal-growth platform, into a premium, credible,...">
+        <div class="card-img-wrap">
+          <img src="screenshots/summit-personal-growth.png" alt="Summit Personal Growth" loading="lazy">
+          <span class="card-status status-showcase">Showcase</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Summit Personal Growth</h2>
+          <p class="card-desc">Act as a senior SaaS product designer and UI/UX strategist. Redesign Evolmeo.ai, an enterprise conversational AI coaching and personal-growth platform, into a premium, credible, conversio...</p>
+          <div class="card-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card-actions">
+            <a href="#summit-personal-growth" class="btn btn-secondary">Project Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="spark-heritage-site" data-category="UI/UX & Landing" data-live="false" data-search="spark heritage site react typescript vite tailwind css shadcn ui create a premium, cinematic, conversion-focused two-page website for “classic fireworks”, a professional fireworks and pyrotechnics company with decades of experience. the goal ...">
+        <div class="card-img-wrap">
+          <img src="screenshots/spark-heritage-site.png" alt="Spark Heritage Site" loading="lazy">
+          <span class="card-status status-showcase">Showcase</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Spark Heritage Site</h2>
+          <p class="card-desc">Create a premium, cinematic, conversion-focused two-page website for “Classic Fireworks”, a professional fireworks and pyrotechnics company with decades of experience. The goal is to gene...</p>
+          <div class="card-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card-actions">
+            <a href="#spark-heritage-site" class="btn btn-secondary">Project Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="solar-spotlight-nz" data-category="UI/UX & Landing" data-live="false" data-search="solar spotlight nz react typescript vite tailwind css shadcn ui act as a senior product designer, ux/ui art director, conversion-focused web designer and solar-brand strategist. create an award-level, high-fidelity responsive website for “th...">
+        <div class="card-img-wrap">
+          <img src="screenshots/solar-spotlight-nz.png" alt="Solar Spotlight Nz" loading="lazy">
+          <span class="card-status status-showcase">Showcase</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Solar Spotlight Nz</h2>
+          <p class="card-desc">Act as a senior Product Designer, UX/UI Art Director, conversion-focused web designer and solar-brand strategist. Create an award-level, high-fidelity responsive website for “THE SOLAR CO...</p>
+          <div class="card-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card-actions">
+            <a href="#solar-spotlight-nz" class="btn btn-secondary">Project Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="audit-spark-growth" data-category="UI/UX & Landing" data-live="false" data-search="audit spark growth react typescript vite tailwind css shadcn ui act as a senior conversion-rate-optimization strategist, ux/ui designer, art director, and expert web developer. build a premium, modern, high-converting 5-page microsite for a ...">
+        <div class="card-img-wrap">
+          <img src="screenshots/audit-spark-growth.png" alt="Audit Spark Growth" loading="lazy">
+          <span class="card-status status-showcase">Showcase</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Audit Spark Growth</h2>
+          <p class="card-desc">Act as a senior conversion-rate-optimization strategist, UX/UI designer, art director, and expert web developer. Build a premium, modern, high-converting 5-page microsite for a profession...</p>
+          <div class="card-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card-actions">
+            <a href="#audit-spark-growth" class="btn btn-secondary">Project Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="hire-me-a-wifey-form" data-category="UI/UX & Landing" data-live="false" data-search="hire me a wifey form react typescript vite tailwind css shadcn ui create a modern, mobile-first multi-step booking form for hire a wifey that feels playful, premium, and on-brand (pink/black/white palette, friendly tone). the form should inclu...">
+        <div class="card-img-wrap">
+          <img src="screenshots/hire-me-a-wifey-form.svg" alt="Hire Me A Wifey Form" loading="lazy">
+          <span class="card-status status-showcase">Showcase</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Hire Me A Wifey Form</h2>
+          <p class="card-desc">Create a modern, mobile-first multi-step booking form for Hire A Wifey that feels playful, premium, and on-brand (pink/black/white palette, friendly tone). The form should include screens...</p>
+          <div class="card-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card-actions">
+            <a href="#hire-me-a-wifey-form" class="btn btn-secondary">Project Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="green-field-foundations" data-category="WordPress" data-live="false" data-search="green field foundations react typescript vite tailwind css shadcn ui build a premium, modern, responsive wordpress-ready informational website for an agricultural/industrial company, inspired by the professional visual quality and information arc...">
+        <div class="card-img-wrap">
+          <img src="screenshots/green-field-foundations.png" alt="Green Field Foundations" loading="lazy">
+          <span class="card-status status-showcase">Showcase</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Green Field Foundations</h2>
+          <p class="card-desc">Build a premium, modern, responsive WordPress-ready informational website for an agricultural/industrial company, inspired by the professional visual quality and information architecture...</p>
+          <div class="card-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card-actions">
+            <a href="#green-field-foundations" class="btn btn-secondary">Project Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="find-secure-link" data-category="UI/UX & Landing" data-live="false" data-search="find secure link react typescript vite tailwind css shadcn ui this project was built with [modern web tools](https://modern web tools.dev).">
+        <div class="card-img-wrap">
+          <img src="screenshots/find-secure-link.png" alt="Find Secure Link" loading="lazy">
+          <span class="card-status status-showcase">Showcase</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Find Secure Link</h2>
+          <p class="card-desc">This project was built with [modern web tools](https://modern web tools.dev).</p>
+          <div class="card-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card-actions">
+            <a href="#find-secure-link" class="btn btn-secondary">Project Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="comfort-forge-design" data-category="UI/UX & Landing" data-live="false" data-search="comfort forge design react typescript vite tailwind css shadcn ui act as a senior award-winning hvac website ux/ui designer. create a premium, bold, fully responsive multipage website concept for “best comfort hvac joliet office,” serving joli...">
+        <div class="card-img-wrap">
+          <img src="screenshots/comfort-forge-design.png" alt="Comfort Forge Design" loading="lazy">
+          <span class="card-status status-showcase">Showcase</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Comfort Forge Design</h2>
+          <p class="card-desc">Act as a Senior Award-Winning HVAC Website UX/UI Designer. Create a premium, bold, fully responsive multipage website concept for “Best Comfort HVAC Joliet Office,” serving Joliet, Chicag...</p>
+          <div class="card-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card-actions">
+            <a href="#comfort-forge-design" class="btn btn-secondary">Project Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="my-african-edu" data-category="UI/UX & Landing" data-live="false" data-search="my african edu react typescript vite tailwind css shadcn ui create a polished, functional, responsive national ministry of education government website prototype. use the provided kenya ministry of education screenshot only as a referenc...">
+        <div class="card-img-wrap">
+          <img src="screenshots/my-african-edu.png" alt="My African Edu" loading="lazy">
+          <span class="card-status status-showcase">Showcase</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">My African Edu</h2>
+          <p class="card-desc">Create a polished, functional, responsive national Ministry of Education government website prototype. Use the provided Kenya Ministry of Education screenshot ONLY as a reference for cont...</p>
+          <div class="card-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card-actions">
+            <a href="#my-african-edu" class="btn btn-secondary">Project Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="teams-elevated-design" data-category="UI/UX & Landing" data-live="false" data-search="teams elevated design react typescript vite tailwind css shadcn ui act as an award-winning web design art director, ux/ui specialist, conversion strategist and senior frontend designer. redesign teamsoffshore.com for a competitive freelancer.co...">
+        <div class="card-img-wrap">
+          <img src="screenshots/teams-elevated-design.png" alt="Teams Elevated Design" loading="lazy">
+          <span class="card-status status-showcase">Showcase</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Teams Elevated Design</h2>
+          <p class="card-desc">Act as an award-winning web design art director, UX/UI specialist, conversion strategist and senior frontend designer. Redesign TeamsOffshore.com for a competitive Freelancer.com contest....</p>
+          <div class="card-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card-actions">
+            <a href="#teams-elevated-design" class="btn btn-secondary">Project Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="coastal-hemp-design" data-category="E-Commerce" data-live="false" data-search="coastal hemp design react typescript vite tailwind css shadcn ui create a premium, highly distinctive shopify homepage design for square grouper farms, a farm-grown hemp brand. use the supplied square grouper farms logo exactly as provided; d...">
+        <div class="card-img-wrap">
+          <img src="screenshots/coastal-hemp-design.png" alt="Coastal Hemp Design" loading="lazy">
+          <span class="card-status status-showcase">Showcase</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Coastal Hemp Design</h2>
+          <p class="card-desc">Create a premium, highly distinctive Shopify homepage design for Square Grouper Farms, a farm-grown hemp brand. Use the supplied Square Grouper Farms logo exactly as provided; do not rede...</p>
+          <div class="card-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card-actions">
+            <a href="#coastal-hemp-design" class="btn btn-secondary">Project Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="idzo-card-cash" data-category="E-Commerce" data-live="false" data-search="idzo card cash react typescript vite tailwind css shadcn ui create a premium, modern and highly polished landing page for idzo, a peer-to-peer shopping platform connecting buyers with credit-card holders. use this exact idzo logo: https:...">
+        <div class="card-img-wrap">
+          <img src="screenshots/idzo-card-cash.png" alt="Idzo Card Cash" loading="lazy">
+          <span class="card-status status-showcase">Showcase</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Idzo Card Cash</h2>
+          <p class="card-desc">Create a premium, modern and highly polished landing page for IDZO, a peer-to-peer shopping platform connecting buyers with credit-card holders. Use this exact IDZO logo: https://i.postim...</p>
+          <div class="card-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card-actions">
+            <a href="#idzo-card-cash" class="btn btn-secondary">Project Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="healthtech-visuals-hub" data-category="UI/UX & Landing" data-live="false" data-search="healthtech visuals hub react typescript vite tailwind css shadcn ui create a premium, original, responsive b2b healthcare technology website for a medical imaging/software company based strictly on the attached client requirements and brand guid...">
+        <div class="card-img-wrap">
+          <img src="screenshots/healthtech-visuals-hub.png" alt="Healthtech Visuals Hub" loading="lazy">
+          <span class="card-status status-showcase">Showcase</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Healthtech Visuals Hub</h2>
+          <p class="card-desc">Create a premium, original, responsive B2B healthcare technology website for a medical imaging/software company based strictly on the attached client requirements and brand guideline. Goa...</p>
+          <div class="card-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card-actions">
+            <a href="#healthtech-visuals-hub" class="btn btn-secondary">Project Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="shoals-griffin-roots" data-category="Web Apps & SaaS" data-live="true" data-search="griffin brothers properties | commercial real estate in the shoals html5 css3 javascript griffin brothers properties | commercial real estate in the shoals is a modern, responsive web application crafted with html5, css3, javascript.">
+        <div class="card-img-wrap">
+          <img src="screenshots/shoals-griffin-roots.png" alt="Griffin Brothers Properties | Commercial Real Estate in the Shoals" loading="lazy">
+          <span class="card-status status-live">⚡ Live Demo</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Griffin Brothers Properties | Commercial Real Estate in the Shoals</h2>
+          <p class="card-desc">Griffin Brothers Properties | Commercial Real Estate in the Shoals is a modern, responsive web application crafted with HTML5, CSS3, JavaScript.</p>
+          <div class="card-tags">
+            <span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JavaScript</span>
+          </div>
+          <div class="card-actions">
+            <a href="projects/shoals-griffin-roots/" target="_blank" class="btn btn-primary">Open Live Site ↗</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="mega-site-solutions" data-category="WordPress" data-live="false" data-search="mega site solutions react typescript vite tailwind css shadcn ui act as a senior b2b art director, ux/ui designer, conversion strategist and wordpress designer. goal: create a contest-winning cr solutions website that feels premium, trustwort...">
+        <div class="card-img-wrap">
+          <img src="screenshots/mega-site-solutions.png" alt="Mega Site Solutions" loading="lazy">
+          <span class="card-status status-showcase">Showcase</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Mega Site Solutions</h2>
+          <p class="card-desc">Act as a senior B2B art director, UX/UI designer, conversion strategist and WordPress designer. GOAL: create a contest-winning CR Solutions website that feels premium, trustworthy and mis...</p>
+          <div class="card-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card-actions">
+            <a href="#mega-site-solutions" class="btn btn-secondary">Project Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="safe-intellectual-space" data-category="UI/UX & Landing" data-live="false" data-search="safe intellectual space react typescript vite tailwind css shadcn ui build a comprehensive, modern, and accessible website redesign for "protectmyidea" (protectmyidea.com.au), an australian intellectual property, patent, and trademark protection ...">
+        <div class="card-img-wrap">
+          <img src="screenshots/safe-intellectual-space.png" alt="Safe Intellectual Space" loading="lazy">
+          <span class="card-status status-showcase">Showcase</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Safe Intellectual Space</h2>
+          <p class="card-desc">Build a comprehensive, modern, and accessible website redesign for "ProtectMyIdea" (protectmyidea.com.au), an Australian intellectual property, patent, and trademark protection agency.</p>
+          <div class="card-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card-actions">
+            <a href="#safe-intellectual-space" class="btn btn-secondary">Project Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="brix-connect-clarity" data-category="E-Commerce" data-live="false" data-search="brix connect clarity react typescript vite tailwind css shadcn ui design an original homepage for nexbrix, an australian hospitality operations saas for independent cafés, restaurants, takeaway shops and small hospitality groups (1–10 location...">
+        <div class="card-img-wrap">
+          <img src="screenshots/brix-connect-clarity.svg" alt="Brix Connect Clarity" loading="lazy">
+          <span class="card-status status-showcase">Showcase</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Brix Connect Clarity</h2>
+          <p class="card-desc">Design an original homepage for NexBrix, an Australian hospitality operations SaaS for independent cafés, restaurants, takeaway shops and small hospitality groups (1–10 locations). Origin...</p>
+          <div class="card-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card-actions">
+            <a href="#brix-connect-clarity" class="btn btn-secondary">Project Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="nexbrix-ops-flow" data-category="E-Commerce" data-live="false" data-search="nexbrix ops flow react typescript vite tailwind css shadcn ui design an original homepage for nexbrix, an australian hospitality operations saas for independent cafés, restaurants, takeaway shops and small hospitality groups (1–10 location...">
+        <div class="card-img-wrap">
+          <img src="screenshots/nexbrix-ops-flow.svg" alt="Nexbrix Ops Flow" loading="lazy">
+          <span class="card-status status-showcase">Showcase</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Nexbrix Ops Flow</h2>
+          <p class="card-desc">Design an original homepage for NexBrix, an Australian hospitality operations SaaS for independent cafés, restaurants, takeaway shops and small hospitality groups (1–10 locations). Origin...</p>
+          <div class="card-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card-actions">
+            <a href="#nexbrix-ops-flow" class="btn btn-secondary">Project Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="peptide" data-category="Web Apps & SaaS" data-live="true" data-search="research peptides you can trust | peptide html5 css3 javascript research peptides you can trust | peptide is a modern, responsive web application crafted with html5, css3, javascript.">
+        <div class="card-img-wrap">
+          <img src="screenshots/peptide.png" alt="Research Peptides You Can Trust | Peptide" loading="lazy">
+          <span class="card-status status-live">⚡ Live Demo</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Research Peptides You Can Trust | Peptide</h2>
+          <p class="card-desc">Research Peptides You Can Trust | Peptide is a modern, responsive web application crafted with HTML5, CSS3, JavaScript.</p>
+          <div class="card-tags">
+            <span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JavaScript</span>
+          </div>
+          <div class="card-actions">
+            <a href="projects/peptide/" target="_blank" class="btn btn-primary">Open Live Site ↗</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="pure-peptide-craft" data-category="E-Commerce" data-live="false" data-search="pure peptide craft react typescript vite tailwind css shadcn ui create a premium, conversion-focused peptide research ecommerce website inspired by the client’s supplied amino club screenshots and current site structure, but do not copy the ...">
+        <div class="card-img-wrap">
+          <img src="screenshots/pure-peptide-craft.png" alt="Pure Peptide Craft" loading="lazy">
+          <span class="card-status status-showcase">Showcase</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Pure Peptide Craft</h2>
+          <p class="card-desc">Create a premium, conversion-focused peptide research eCommerce website inspired by the client’s supplied Amino Club screenshots and current site structure, but do NOT copy the original p...</p>
+          <div class="card-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card-actions">
+            <a href="#pure-peptide-craft" class="btn btn-secondary">Project Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="dine-and-delight-cms" data-category="UI/UX & Landing" data-live="false" data-search="dine and delight cms react typescript vite tailwind css shadcn ui build a premium, award-winning restaurant website prototype for a freelancer.com contest. it must look like a custom $10k+ hospitality brand, never a generic ai template. use ci...">
+        <div class="card-img-wrap">
+          <img src="screenshots/dine-and-delight-cms.png" alt="Dine And Delight Cms" loading="lazy">
+          <span class="card-status status-showcase">Showcase</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Dine And Delight Cms</h2>
+          <p class="card-desc">Build a premium, award-winning restaurant website prototype for a Freelancer.com contest. It must look like a custom <div class="card" id="dine-and-delight-cms" data-category="UI/UX & Landing" data-live="false" data-search="dine and delight cms react typescript vite tailwind css shadcn ui build a premium, award-winning restaurant website prototype for a freelancer.com contest. it must look like a custom $10k+ hospitality brand, never a generic ai template. use ci...">
+        <div class="card-img-wrap">
+          <img src="screenshots/dine-and-delight-cms.png" alt="Dine And Delight Cms" loading="lazy">
+          <span class="card-status status-showcase">Showcase</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Dine And Delight Cms</h2>
+          <p class="card-desc">0k+ hospitality brand, never a generic AI template. Use cinematic fu...</p>
+          <div class="card-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card-actions">
+            <a href="#dine-and-delight-cms" class="btn btn-secondary">Project Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="sage-and-stone-design" data-category="UI/UX & Landing" data-live="false" data-search="sage and stone design react typescript vite tailwind css shadcn ui create a premium, modern, conversion-focused responsive website for dawson landscaping & maintenance, perth wa. use the provided client logo exactly as supplied; never redraw, d...">
+        <div class="card-img-wrap">
+          <img src="screenshots/sage-and-stone-design.png" alt="Sage And Stone Design" loading="lazy">
+          <span class="card-status status-showcase">Showcase</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Sage And Stone Design</h2>
+          <p class="card-desc">Create a premium, modern, conversion-focused responsive website for DAWSON LANDSCAPING & MAINTENANCE, Perth WA. USE THE PROVIDED CLIENT LOGO EXACTLY AS SUPPLIED; never redraw, distort, re...</p>
+          <div class="card-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card-actions">
+            <a href="#sage-and-stone-design" class="btn btn-secondary">Project Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="quiet-luxury-journeys" data-category="UI/UX & Landing" data-live="false" data-search="quiet luxury journeys react typescript vite tailwind css shadcn ui act as a senior luxury web designer, ux/ui art director and brand strategist. create a completely original, bespoke, high-end website for a premium custom carpentry, cabinetry a...">
+        <div class="card-img-wrap">
+          <img src="screenshots/quiet-luxury-journeys.png" alt="Quiet Luxury Journeys" loading="lazy">
+          <span class="card-status status-showcase">Showcase</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Quiet Luxury Journeys</h2>
+          <p class="card-desc">Act as a senior luxury web designer, UX/UI art director and brand strategist. Create a completely original, bespoke, high-end website for a premium custom carpentry, cabinetry and archite...</p>
+          <div class="card-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card-actions">
+            <a href="#quiet-luxury-journeys" class="btn btn-secondary">Project Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="taylor-ave-wp-rebuild" data-category="WordPress" data-live="false" data-search="taylor ave wp rebuild react typescript vite tailwind css shadcn ui act as a senior wordpress ui/ux designer and front-end architect. goal: create a contest-winning recreation of taylor ave roofing solutions for a clean wordpress/gutenberg + kad...">
+        <div class="card-img-wrap">
+          <img src="screenshots/taylor-ave-wp-rebuild.png" alt="Taylor Ave Wp Rebuild" loading="lazy">
+          <span class="card-status status-showcase">Showcase</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Taylor Ave Wp Rebuild</h2>
+          <p class="card-desc">Act as a Senior WordPress UI/UX Designer and Front-End Architect. GOAL: Create a contest-winning recreation of Taylor Ave Roofing Solutions for a clean WordPress/Gutenberg + Kadence Block...</p>
+          <div class="card-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card-actions">
+            <a href="#taylor-ave-wp-rebuild" class="btn btn-secondary">Project Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="mahoneys-artful-canvas" data-category="UI/UX & Landing" data-live="false" data-search="mahoneys artful canvas react typescript vite tailwind css shadcn ui act as an award-winning contemporary art-gallery creative director, ui/ux designer and senior frontend developer. design and build a premium, fresh, modern and bold 6-page websi...">
+        <div class="card-img-wrap">
+          <img src="screenshots/mahoneys-artful-canvas.svg" alt="Mahoneys Artful Canvas" loading="lazy">
+          <span class="card-status status-showcase">Showcase</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Mahoneys Artful Canvas</h2>
+          <p class="card-desc">Act as an award-winning contemporary art-gallery creative director, UI/UX designer and senior frontend developer. Design and build a premium, fresh, modern and bold 6-page website for Mah...</p>
+          <div class="card-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card-actions">
+            <a href="#mahoneys-artful-canvas" class="btn btn-secondary">Project Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="gallery-narrative-flow" data-category="UI/UX & Landing" data-live="false" data-search="gallery narrative flow react typescript vite tailwind css shadcn ui act as an award-winning contemporary art-gallery creative director, ui/ux designer and senior frontend developer. create a completely new, distinctive and competition-level 6-pa...">
+        <div class="card-img-wrap">
+          <img src="screenshots/gallery-narrative-flow.svg" alt="Gallery Narrative Flow" loading="lazy">
+          <span class="card-status status-showcase">Showcase</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Gallery Narrative Flow</h2>
+          <p class="card-desc">Act as an award-winning contemporary art-gallery creative director, UI/UX designer and senior frontend developer. Create a completely NEW, distinctive and competition-level 6-page website...</p>
+          <div class="card-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card-actions">
+            <a href="#gallery-narrative-flow" class="btn btn-secondary">Project Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="healthcare-connect-crafted" data-category="WordPress" data-live="false" data-search="healthcare connect crafted react typescript vite tailwind css shadcn ui act as a senior healthcare ux/ui designer, conversion strategist and wordpress art director. use the uploaded tpc works logo as the primary brand reference and the uploaded home...">
+        <div class="card-img-wrap">
+          <img src="screenshots/healthcare-connect-crafted.png" alt="Healthcare Connect Crafted" loading="lazy">
+          <span class="card-status status-showcase">Showcase</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Healthcare Connect Crafted</h2>
+          <p class="card-desc">Act as a senior healthcare UX/UI designer, conversion strategist and WordPress art director. Use the uploaded TPC Works logo as the primary brand reference and the uploaded homepage scree...</p>
+          <div class="card-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card-actions">
+            <a href="#healthcare-connect-crafted" class="btn btn-secondary">Project Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="robot-zen-interface" data-category="UI/UX & Landing" data-live="false" data-search="robot zen interface react typescript vite tailwind css shadcn ui act as a senior product designer, ux researcher, human-machine interface (hmi) specialist, and creative director with expertise in robotics, industrial touchscreens, automotive ...">
+        <div class="card-img-wrap">
+          <img src="screenshots/robot-zen-interface.svg" alt="Robot Zen Interface" loading="lazy">
+          <span class="card-status status-showcase">Showcase</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Robot Zen Interface</h2>
+          <p class="card-desc">Act as a Senior Product Designer, UX Researcher, Human-Machine Interface (HMI) Specialist, and Creative Director with expertise in robotics, industrial touchscreens, automotive infotainme...</p>
+          <div class="card-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card-actions">
+            <a href="#robot-zen-interface" class="btn btn-secondary">Project Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="orbit-assist-panel" data-category="UI/UX & Landing" data-live="false" data-search="orbit assist panel react typescript vite tailwind css shadcn ui act as a senior product designer, ux researcher, human-machine interface (hmi) specialist, and creative director with expertise in robotics, industrial touchscreens, automotive ...">
+        <div class="card-img-wrap">
+          <img src="screenshots/orbit-assist-panel.svg" alt="Orbit Assist Panel" loading="lazy">
+          <span class="card-status status-showcase">Showcase</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Orbit Assist Panel</h2>
+          <p class="card-desc">Act as a Senior Product Designer, UX Researcher, Human-Machine Interface (HMI) Specialist, and Creative Director with expertise in robotics, industrial touchscreens, automotive infotainme...</p>
+          <div class="card-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card-actions">
+            <a href="#orbit-assist-panel" class="btn btn-secondary">Project Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="global-auto-credence" data-category="WordPress" data-live="false" data-search="global auto credence react typescript vite tailwind css shadcn ui act as an award-winning automotive enterprise ux/ui designer, brand strategist, and senior wordpress architect. your goal is to create a contest-winning premium corporate websit...">
+        <div class="card-img-wrap">
+          <img src="screenshots/global-auto-credence.png" alt="Global Auto Credence" loading="lazy">
+          <span class="card-status status-showcase">Showcase</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Global Auto Credence</h2>
+          <p class="card-desc">Act as an award-winning Automotive Enterprise UX/UI Designer, Brand Strategist, and Senior WordPress Architect. Your goal is to create a contest-winning premium corporate website for TKM...</p>
+          <div class="card-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card-actions">
+            <a href="#global-auto-credence" class="btn btn-secondary">Project Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="quiet-luxury-atelier" data-category="UI/UX & Landing" data-live="false" data-search="quiet luxury atelier react typescript vite tailwind css shadcn ui design an award-winning luxury editorial website in figma for the attraction strategist, an exclusive attraction strategy, image consulting and coaching brand founded by ivanka ...">
+        <div class="card-img-wrap">
+          <img src="screenshots/quiet-luxury-atelier.svg" alt="Quiet Luxury Atelier" loading="lazy">
+          <span class="card-status status-showcase">Showcase</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Quiet Luxury Atelier</h2>
+          <p class="card-desc">Design an award-winning luxury editorial website in Figma for The Attraction Strategist, an exclusive attraction strategy, image consulting and coaching brand founded by Ivanka for succes...</p>
+          <div class="card-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card-actions">
+            <a href="#quiet-luxury-atelier" class="btn btn-secondary">Project Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="golden-editor" data-category="UI/UX & Landing" data-live="false" data-search="golden editor react typescript vite tailwind css shadcn ui act as an awwwards site of the day creative director, senior luxury editorial designer, art director and figma design systems expert. transform this existing homepage into a con...">
+        <div class="card-img-wrap">
+          <img src="screenshots/golden-editor.svg" alt="Golden Editor" loading="lazy">
+          <span class="card-status status-showcase">Showcase</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Golden Editor</h2>
+          <p class="card-desc">Act as an Awwwards Site of the Day Creative Director, Senior Luxury Editorial Designer, Art Director and Figma Design Systems Expert. Transform this existing homepage into a contest-winni...</p>
+          <div class="card-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card-actions">
+            <a href="#golden-editor" class="btn btn-secondary">Project Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="spotless-property-hub" data-category="UI/UX & Landing" data-live="false" data-search="spotless property hub react typescript vite tailwind css shadcn ui design an award-winning, premium, fully responsive website for sparkclean property services (placeholder brand), specializing in residential cleaning, commercial cleaning, deep ...">
+        <div class="card-img-wrap">
+          <img src="screenshots/spotless-property-hub.png" alt="Spotless Property Hub" loading="lazy">
+          <span class="card-status status-showcase">Showcase</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Spotless Property Hub</h2>
+          <p class="card-desc">Design an award-winning, premium, fully responsive website for SparkClean Property Services (placeholder brand), specializing in residential cleaning, commercial cleaning, deep cleaning,...</p>
+          <div class="card-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card-actions">
+            <a href="#spotless-property-hub" class="btn btn-secondary">Project Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="fleet-maintenance-future" data-category="Web Apps & SaaS" data-live="false" data-search="fleet maintenance future react typescript vite tailwind css shadcn ui act as a world-class creative director, enterprise ux strategist, senior saas product designer, automotive industry specialist, and award-winning ui/ux architect. design a premi...">
+        <div class="card-img-wrap">
+          <img src="screenshots/fleet-maintenance-future.png" alt="Fleet Maintenance Future" loading="lazy">
+          <span class="card-status status-showcase">Showcase</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Fleet Maintenance Future</h2>
+          <p class="card-desc">Act as a world-class Creative Director, Enterprise UX Strategist, Senior SaaS Product Designer, Automotive Industry Specialist, and Award-Winning UI/UX Architect. Design a premium, develo...</p>
+          <div class="card-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card-actions">
+            <a href="#fleet-maintenance-future" class="btn btn-secondary">Project Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="radiant-skin-lounge" data-category="UI/UX & Landing" data-live="false" data-search="radiant skin lounge react typescript vite tailwind css shadcn ui act as a world-class ui/ux designer, art director, creative director, healthcare branding expert, cro specialist, and awwwards-level landing page designer. first, analyze the at...">
+        <div class="card-img-wrap">
+          <img src="screenshots/radiant-skin-lounge.png" alt="Radiant Skin Lounge" loading="lazy">
+          <span class="card-status status-showcase">Showcase</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Radiant Skin Lounge</h2>
+          <p class="card-desc">Act as a world-class UI/UX Designer, Art Director, Creative Director, Healthcare Branding Expert, CRO Specialist, and Awwwards-level Landing Page Designer. First, analyze the attached cli...</p>
+          <div class="card-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card-actions">
+            <a href="#radiant-skin-lounge" class="btn btn-secondary">Project Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="cinematic-scroll-story-41" data-category="UI/UX & Landing" data-live="false" data-search="cinematic scroll story 41 react typescript vite tailwind css shadcn ui act as a world-class creative director, senior frontend architect, gsap & scrolltrigger expert, motion designer, performance engineer, accessibility specialist, and award-winnin...">
+        <div class="card-img-wrap">
+          <img src="screenshots/cinematic-scroll-story-41.png" alt="Cinematic Scroll Story 41" loading="lazy">
+          <span class="card-status status-showcase">Showcase</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Cinematic Scroll Story 41</h2>
+          <p class="card-desc">Act as a world-class Creative Director, Senior Frontend Architect, GSAP & ScrollTrigger Expert, Motion Designer, Performance Engineer, Accessibility Specialist, and Award-Winning UI/UX De...</p>
+          <div class="card-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card-actions">
+            <a href="#cinematic-scroll-story-41" class="btn btn-secondary">Project Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="family-spark-pages" data-category="UI/UX & Landing" data-live="false" data-search="family spark pages react typescript vite tailwind css shadcn ui act as an award-winning gohighlevel funnel sketchers expert, cro strategist, premium ui/ux designer, editorial art director, and landing page architect. design a calm, elegant, ...">
+        <div class="card-img-wrap">
+          <img src="screenshots/family-spark-pages.png" alt="Family Spark Pages" loading="lazy">
+          <span class="card-status status-showcase">Showcase</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Family Spark Pages</h2>
+          <p class="card-desc">Act as an award-winning GoHighLevel Funnel Sketchers Expert, CRO Strategist, Premium UI/UX Designer, Editorial Art Director, and Landing Page Architect. Design a calm, elegant, premium, h...</p>
+          <div class="card-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card-actions">
+            <a href="#family-spark-pages" class="btn btn-secondary">Project Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="serene-enroll-builder" data-category="UI/UX & Landing" data-live="false" data-search="serene enroll builder react typescript vite tailwind css shadcn ui act as an award-winning gohighlevel funnel sketchers expert, cro strategist, premium ui/ux designer, editorial art director, and landing page architect. design a calm, elegant, ...">
+        <div class="card-img-wrap">
+          <img src="screenshots/serene-enroll-builder.png" alt="Serene Enroll Builder" loading="lazy">
+          <span class="card-status status-showcase">Showcase</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Serene Enroll Builder</h2>
+          <p class="card-desc">Act as an award-winning GoHighLevel Funnel Sketchers Expert, CRO Strategist, Premium UI/UX Designer, Editorial Art Director, and Landing Page Architect. Design a calm, elegant, premium, h...</p>
+          <div class="card-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card-actions">
+            <a href="#serene-enroll-builder" class="btn btn-secondary">Project Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="guardian-deck-craft" data-category="UI/UX & Landing" data-live="false" data-search="guardian deck craft react typescript vite tailwind css shadcn ui act as a world-class senior presentation designer from pentagram, collins, mucho, microsoft design, and leading institutional branding agencies specializing in venture capital, ...">
+        <div class="card-img-wrap">
+          <img src="screenshots/guardian-deck-craft.svg" alt="Guardian Deck Craft" loading="lazy">
+          <span class="card-status status-showcase">Showcase</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Guardian Deck Craft</h2>
+          <p class="card-desc">Act as a world-class senior presentation designer from Pentagram, Collins, Mucho, Microsoft Design, and leading institutional branding agencies specializing in venture capital, private eq...</p>
+          <div class="card-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card-actions">
+            <a href="#guardian-deck-craft" class="btn btn-secondary">Project Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="slab-gallery-collective" data-category="WordPress" data-live="false" data-search="slab gallery collective react typescript vite tailwind css shadcn ui design and build a premium minimalist wordpress website for wildslabs, a luxury destination for limited-edition sports memorabilia, trading cards, signed collectibles, and pop-c...">
+        <div class="card-img-wrap">
+          <img src="screenshots/slab-gallery-collective.png" alt="Slab Gallery Collective" loading="lazy">
+          <span class="card-status status-showcase">Showcase</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Slab Gallery Collective</h2>
+          <p class="card-desc">Design and build a premium minimalist WordPress website for WildSlabs, a luxury destination for limited-edition sports memorabilia, trading cards, signed collectibles, and pop-culture art...</p>
+          <div class="card-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card-actions">
+            <a href="#slab-gallery-collective" class="btn btn-secondary">Project Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="InvestorPresentationRedesign" data-category="Web Apps & SaaS" data-live="true" data-search="figma-make-app react typescript vite tailwind css figma-make-app is a modern, responsive web application crafted with react, typescript, vite.">
+        <div class="card-img-wrap">
+          <img src="screenshots/InvestorPresentationRedesign.svg" alt="figma-make-app" loading="lazy">
+          <span class="card-status status-live">⚡ Live Demo</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">figma-make-app</h2>
+          <p class="card-desc">figma-make-app is a modern, responsive web application crafted with React, TypeScript, Vite.</p>
+          <div class="card-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card-actions">
+            <a href="projects/InvestorPresentationRedesign/" target="_blank" class="btn btn-primary">Open Live Site ↗</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="elite-entry-studio" data-category="UI/UX & Landing" data-live="false" data-search="elite entry studio react typescript vite tailwind css shadcn ui act as a senior ux strategist, award-winning ui designer, creative director and senior frontend engineer. your goal is to create a freelancer.com contest-winning redesign for cs...">
+        <div class="card-img-wrap">
+          <img src="screenshots/elite-entry-studio.png" alt="Elite Entry Studio" loading="lazy">
+          <span class="card-status status-showcase">Showcase</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Elite Entry Studio</h2>
+          <p class="card-desc">Act as a Senior UX Strategist, Award-Winning UI Designer, Creative Director and Senior Frontend Engineer. Your goal is to create a Freelancer.com contest-winning redesign for CSN.pl that...</p>
+          <div class="card-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card-actions">
+            <a href="#elite-entry-studio" class="btn btn-secondary">Project Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="smile-craft-pro-93" data-category="Web Apps & SaaS" data-live="false" data-search="smile craft pro 93 react typescript vite tailwind css shadcn ui design and build a premium, mobile-first, high-converting single-page dental landing page focused on maximizing new patient appointments and specialist treatment bookings. the p...">
+        <div class="card-img-wrap">
+          <img src="screenshots/smile-craft-pro-93.png" alt="Smile Craft Pro 93" loading="lazy">
+          <span class="card-status status-showcase">Showcase</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Smile Craft Pro 93</h2>
+          <p class="card-desc">Design and build a premium, mobile-first, high-converting single-page dental landing page focused on maximizing new patient appointments and specialist treatment bookings. The primary con...</p>
+          <div class="card-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card-actions">
+            <a href="#smile-craft-pro-93" class="btn btn-secondary">Project Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="hair-xpressions-revived" data-category="UI/UX & Landing" data-live="false" data-search="hair xpressions revived react typescript vite tailwind css shadcn ui this project was built with [modern web tools](https://modern web tools.dev).">
+        <div class="card-img-wrap">
+          <img src="screenshots/hair-xpressions-revived.png" alt="Hair Xpressions Revived" loading="lazy">
+          <span class="card-status status-showcase">Showcase</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Hair Xpressions Revived</h2>
+          <p class="card-desc">This project was built with [modern web tools](https://modern web tools.dev).</p>
+          <div class="card-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card-actions">
+            <a href="#hair-xpressions-revived" class="btn btn-secondary">Project Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="adcmobility-hub" data-category="UI/UX & Landing" data-live="false" data-search="adcmobility hub react typescript vite tailwind css shadcn ui this project was built with [modern web tools](https://modern web tools.dev).">
+        <div class="card-img-wrap">
+          <img src="screenshots/adcmobility-hub.svg" alt="Adcmobility Hub" loading="lazy">
+          <span class="card-status status-showcase">Showcase</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Adcmobility Hub</h2>
+          <p class="card-desc">This project was built with [modern web tools](https://modern web tools.dev).</p>
+          <div class="card-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card-actions">
+            <a href="#adcmobility-hub" class="btn btn-secondary">Project Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="elevate-trade-craft" data-category="UI/UX & Landing" data-live="false" data-search="elevate trade craft react typescript vite tailwind css shadcn ui this project was built with [modern web tools](https://modern web tools.dev).">
+        <div class="card-img-wrap">
+          <img src="screenshots/elevate-trade-craft.png" alt="Elevate Trade Craft" loading="lazy">
+          <span class="card-status status-showcase">Showcase</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Elevate Trade Craft</h2>
+          <p class="card-desc">This project was built with [modern web tools](https://modern web tools.dev).</p>
+          <div class="card-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card-actions">
+            <a href="#elevate-trade-craft" class="btn btn-secondary">Project Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="project-solid-visuals" data-category="UI/UX & Landing" data-live="false" data-search="project solid visuals react typescript vite tailwind css shadcn ui this project was built with [modern web tools](https://modern web tools.dev).">
+        <div class="card-img-wrap">
+          <img src="screenshots/project-solid-visuals.png" alt="Project Solid Visuals" loading="lazy">
+          <span class="card-status status-showcase">Showcase</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Project Solid Visuals</h2>
+          <p class="card-desc">This project was built with [modern web tools](https://modern web tools.dev).</p>
+          <div class="card-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card-actions">
+            <a href="#project-solid-visuals" class="btn btn-secondary">Project Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="uni-wardrobe-connect" data-category="UI/UX & Landing" data-live="false" data-search="uni wardrobe connect react typescript vite tailwind css shadcn ui this project was built with [modern web tools](https://modern web tools.dev).">
+        <div class="card-img-wrap">
+          <img src="screenshots/uni-wardrobe-connect.png" alt="Uni Wardrobe Connect" loading="lazy">
+          <span class="card-status status-showcase">Showcase</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Uni Wardrobe Connect</h2>
+          <p class="card-desc">This project was built with [modern web tools](https://modern web tools.dev).</p>
+          <div class="card-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card-actions">
+            <a href="#uni-wardrobe-connect" class="btn btn-secondary">Project Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="fashion-campus-closet" data-category="UI/UX & Landing" data-live="false" data-search="fashion campus closet react typescript vite tailwind css shadcn ui this project was built with [modern web tools](https://modern web tools.dev).">
+        <div class="card-img-wrap">
+          <img src="screenshots/fashion-campus-closet.png" alt="Fashion Campus Closet" loading="lazy">
+          <span class="card-status status-showcase">Showcase</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Fashion Campus Closet</h2>
+          <p class="card-desc">This project was built with [modern web tools](https://modern web tools.dev).</p>
+          <div class="card-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card-actions">
+            <a href="#fashion-campus-closet" class="btn btn-secondary">Project Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="uni-blvd-wardrobe" data-category="UI/UX & Landing" data-live="false" data-search="uni blvd wardrobe react typescript vite tailwind css shadcn ui this project was built with [modern web tools](https://modern web tools.dev).">
+        <div class="card-img-wrap">
+          <img src="screenshots/uni-blvd-wardrobe.png" alt="Uni Blvd Wardrobe" loading="lazy">
+          <span class="card-status status-showcase">Showcase</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Uni Blvd Wardrobe</h2>
+          <p class="card-desc">This project was built with [modern web tools](https://modern web tools.dev).</p>
+          <div class="card-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card-actions">
+            <a href="#uni-blvd-wardrobe" class="btn btn-secondary">Project Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="chic-savon-design" data-category="UI/UX & Landing" data-live="false" data-search="chic savon design react typescript vite tailwind css shadcn ui this project was built with [modern web tools](https://modern web tools.dev).">
+        <div class="card-img-wrap">
+          <img src="screenshots/chic-savon-design.svg" alt="Chic Savon Design" loading="lazy">
+          <span class="card-status status-showcase">Showcase</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Chic Savon Design</h2>
+          <p class="card-desc">This project was built with [modern web tools](https://modern web tools.dev).</p>
+          <div class="card-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card-actions">
+            <a href="#chic-savon-design" class="btn btn-secondary">Project Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="petite-chipie-chic" data-category="UI/UX & Landing" data-live="false" data-search="petite chipie chic react typescript vite tailwind css shadcn ui this project was built with [modern web tools](https://modern web tools.dev).">
+        <div class="card-img-wrap">
+          <img src="screenshots/petite-chipie-chic.png" alt="Petite Chipie Chic" loading="lazy">
+          <span class="card-status status-showcase">Showcase</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Petite Chipie Chic</h2>
+          <p class="card-desc">This project was built with [modern web tools](https://modern web tools.dev).</p>
+          <div class="card-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card-actions">
+            <a href="#petite-chipie-chic" class="btn btn-secondary">Project Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="elp-futures-forge" data-category="Web Apps & SaaS" data-live="false" data-search="elp futures forge react typescript vite tailwind css shadcn ui tanstack_start_ts is a modern, responsive web application crafted with react, typescript, vite.">
+        <div class="card-img-wrap">
+          <img src="screenshots/elp-futures-forge.png" alt="Elp Futures Forge" loading="lazy">
+          <span class="card-status status-showcase">Showcase</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Elp Futures Forge</h2>
+          <p class="card-desc">tanstack_start_ts is a modern, responsive web application crafted with React, TypeScript, Vite.</p>
+          <div class="card-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card-actions">
+            <a href="#elp-futures-forge" class="btn btn-secondary">Project Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="premium-trading-space" data-category="Web Apps & SaaS" data-live="false" data-search="premium trading space react typescript vite tailwind css shadcn ui tanstack_start_ts is a modern, responsive web application crafted with react, typescript, vite.">
+        <div class="card-img-wrap">
+          <img src="screenshots/premium-trading-space.png" alt="Premium Trading Space" loading="lazy">
+          <span class="card-status status-showcase">Showcase</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Premium Trading Space</h2>
+          <p class="card-desc">tanstack_start_ts is a modern, responsive web application crafted with React, TypeScript, Vite.</p>
+          <div class="card-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card-actions">
+            <a href="#premium-trading-space" class="btn btn-secondary">Project Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="reservechain-vault-forge" data-category="Web Apps & SaaS" data-live="false" data-search="reservechain vault forge react typescript vite tailwind css shadcn ui tanstack_start_ts is a modern, responsive web application crafted with react, typescript, vite.">
+        <div class="card-img-wrap">
+          <img src="screenshots/reservechain-vault-forge.png" alt="Reservechain Vault Forge" loading="lazy">
+          <span class="card-status status-showcase">Showcase</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Reservechain Vault Forge</h2>
+          <p class="card-desc">tanstack_start_ts is a modern, responsive web application crafted with React, TypeScript, Vite.</p>
+          <div class="card-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card-actions">
+            <a href="#reservechain-vault-forge" class="btn btn-secondary">Project Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="reserve-chain-hub" data-category="Web Apps & SaaS" data-live="false" data-search="reserve chain hub react typescript vite tailwind css shadcn ui tanstack_start_ts is a modern, responsive web application crafted with react, typescript, vite.">
+        <div class="card-img-wrap">
+          <img src="screenshots/reserve-chain-hub.svg" alt="Reserve Chain Hub" loading="lazy">
+          <span class="card-status status-showcase">Showcase</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Reserve Chain Hub</h2>
+          <p class="card-desc">tanstack_start_ts is a modern, responsive web application crafted with React, TypeScript, Vite.</p>
+          <div class="card-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card-actions">
+            <a href="#reserve-chain-hub" class="btn btn-secondary">Project Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="temima-craft-suite" data-category="Web Apps & SaaS" data-live="false" data-search="temima craft suite react typescript vite tailwind css shadcn ui tanstack_start_ts is a modern, responsive web application crafted with react, typescript, vite.">
+        <div class="card-img-wrap">
+          <img src="screenshots/temima-craft-suite.png" alt="Temima Craft Suite" loading="lazy">
+          <span class="card-status status-showcase">Showcase</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Temima Craft Suite</h2>
+          <p class="card-desc">tanstack_start_ts is a modern, responsive web application crafted with React, TypeScript, Vite.</p>
+          <div class="card-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card-actions">
+            <a href="#temima-craft-suite" class="btn btn-secondary">Project Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="primo-kitchen-elevate" data-category="Web Apps & SaaS" data-live="false" data-search="primo kitchen elevate react typescript vite tailwind css shadcn ui tanstack_start_ts is a modern, responsive web application crafted with react, typescript, vite.">
+        <div class="card-img-wrap">
+          <img src="screenshots/primo-kitchen-elevate.png" alt="Primo Kitchen Elevate" loading="lazy">
+          <span class="card-status status-showcase">Showcase</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Primo Kitchen Elevate</h2>
+          <p class="card-desc">tanstack_start_ts is a modern, responsive web application crafted with React, TypeScript, Vite.</p>
+          <div class="card-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card-actions">
+            <a href="#primo-kitchen-elevate" class="btn btn-secondary">Project Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="flexcel-growth-igniter" data-category="Web Apps & SaaS" data-live="false" data-search="flexcel growth igniter react typescript vite tailwind css shadcn ui tanstack_start_ts is a modern, responsive web application crafted with react, typescript, vite.">
+        <div class="card-img-wrap">
+          <img src="screenshots/flexcel-growth-igniter.png" alt="Flexcel Growth Igniter" loading="lazy">
+          <span class="card-status status-showcase">Showcase</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Flexcel Growth Igniter</h2>
+          <p class="card-desc">tanstack_start_ts is a modern, responsive web application crafted with React, TypeScript, Vite.</p>
+          <div class="card-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card-actions">
+            <a href="#flexcel-growth-igniter" class="btn btn-secondary">Project Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="ignite-growth-narrative" data-category="Web Apps & SaaS" data-live="false" data-search="ignite growth narrative react typescript vite tailwind css shadcn ui tanstack_start_ts is a modern, responsive web application crafted with react, typescript, vite.">
+        <div class="card-img-wrap">
+          <img src="screenshots/ignite-growth-narrative.png" alt="Ignite Growth Narrative" loading="lazy">
+          <span class="card-status status-showcase">Showcase</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Ignite Growth Narrative</h2>
+          <p class="card-desc">tanstack_start_ts is a modern, responsive web application crafted with React, TypeScript, Vite.</p>
+          <div class="card-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card-actions">
+            <a href="#ignite-growth-narrative" class="btn btn-secondary">Project Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="MobileCRMContactManagement" data-category="Web Apps & SaaS" data-live="true" data-search="figma-make-app react typescript vite tailwind css figma-make-app is a modern, responsive web application crafted with react, typescript, vite.">
+        <div class="card-img-wrap">
+          <img src="screenshots/MobileCRMContactManagement.png" alt="figma-make-app" loading="lazy">
+          <span class="card-status status-live">⚡ Live Demo</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">figma-make-app</h2>
+          <p class="card-desc">figma-make-app is a modern, responsive web application crafted with React, TypeScript, Vite.</p>
+          <div class="card-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card-actions">
+            <a href="projects/MobileCRMContactManagement/" target="_blank" class="btn btn-primary">Open Live Site ↗</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="canvas-possibilities-engine" data-category="Web Apps & SaaS" data-live="false" data-search="canvas possibilities engine react typescript vite tailwind css shadcn ui tanstack_start_ts is a modern, responsive web application crafted with react, typescript, vite.">
+        <div class="card-img-wrap">
+          <img src="screenshots/canvas-possibilities-engine.svg" alt="Canvas Possibilities Engine" loading="lazy">
+          <span class="card-status status-showcase">Showcase</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Canvas Possibilities Engine</h2>
+          <p class="card-desc">tanstack_start_ts is a modern, responsive web application crafted with React, TypeScript, Vite.</p>
+          <div class="card-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card-actions">
+            <a href="#canvas-possibilities-engine" class="btn btn-secondary">Project Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="possibilities-unlocked-hero" data-category="Web Apps & SaaS" data-live="false" data-search="possibilities unlocked hero react typescript vite tailwind css shadcn ui tanstack_start_ts is a modern, responsive web application crafted with react, typescript, vite.">
+        <div class="card-img-wrap">
+          <img src="screenshots/possibilities-unlocked-hero.svg" alt="Possibilities Unlocked Hero" loading="lazy">
+          <span class="card-status status-showcase">Showcase</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Possibilities Unlocked Hero</h2>
+          <p class="card-desc">tanstack_start_ts is a modern, responsive web application crafted with React, TypeScript, Vite.</p>
+          <div class="card-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card-actions">
+            <a href="#possibilities-unlocked-hero" class="btn btn-secondary">Project Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="unlock-software-magic" data-category="Web Apps & SaaS" data-live="false" data-search="unlock software magic react typescript vite tailwind css shadcn ui tanstack_start_ts is a modern, responsive web application crafted with react, typescript, vite.">
+        <div class="card-img-wrap">
+          <img src="screenshots/unlock-software-magic.svg" alt="Unlock Software Magic" loading="lazy">
+          <span class="card-status status-showcase">Showcase</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Unlock Software Magic</h2>
+          <p class="card-desc">tanstack_start_ts is a modern, responsive web application crafted with React, TypeScript, Vite.</p>
+          <div class="card-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card-actions">
+            <a href="#unlock-software-magic" class="btn btn-secondary">Project Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="insight-grove-cms" data-category="Web Apps & SaaS" data-live="false" data-search="insight grove cms react typescript vite tailwind css shadcn ui tanstack_start_ts is a modern, responsive web application crafted with react, typescript, vite.">
+        <div class="card-img-wrap">
+          <img src="screenshots/insight-grove-cms.png" alt="Insight Grove Cms" loading="lazy">
+          <span class="card-status status-showcase">Showcase</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Insight Grove Cms</h2>
+          <p class="card-desc">tanstack_start_ts is a modern, responsive web application crafted with React, TypeScript, Vite.</p>
+          <div class="card-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card-actions">
+            <a href="#insight-grove-cms" class="btn btn-secondary">Project Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="BodyShopBoosterCRMRedesign" data-category="E-Commerce" data-live="true" data-search="figma-make-app react typescript vite tailwind css shadcn ui figma-make-app is a modern, responsive web application crafted with react, typescript, vite.">
+        <div class="card-img-wrap">
+          <img src="screenshots/BodyShopBoosterCRMRedesign.png" alt="figma-make-app" loading="lazy">
+          <span class="card-status status-live">⚡ Live Demo</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">figma-make-app</h2>
+          <p class="card-desc">figma-make-app is a modern, responsive web application crafted with React, TypeScript, Vite.</p>
+          <div class="card-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card-actions">
+            <a href="projects/BodyShopBoosterCRMRedesign/" target="_blank" class="btn btn-primary">Open Live Site ↗</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="elevate-your-workshop" data-category="E-Commerce" data-live="false" data-search="elevate your workshop react typescript vite tailwind css shadcn ui tanstack_start_ts is a modern, responsive web application crafted with react, typescript, vite.">
+        <div class="card-img-wrap">
+          <img src="screenshots/elevate-your-workshop.png" alt="Elevate Your Workshop" loading="lazy">
+          <span class="card-status status-showcase">Showcase</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Elevate Your Workshop</h2>
+          <p class="card-desc">tanstack_start_ts is a modern, responsive web application crafted with React, TypeScript, Vite.</p>
+          <div class="card-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card-actions">
+            <a href="#elevate-your-workshop" class="btn btn-secondary">Project Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="gem-vault-essentials" data-category="Web Apps & SaaS" data-live="false" data-search="gem vault essentials react typescript vite tailwind css shadcn ui tanstack_start_ts is a modern, responsive web application crafted with react, typescript, vite.">
+        <div class="card-img-wrap">
+          <img src="screenshots/gem-vault-essentials.png" alt="Gem Vault Essentials" loading="lazy">
+          <span class="card-status status-showcase">Showcase</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Gem Vault Essentials</h2>
+          <p class="card-desc">tanstack_start_ts is a modern, responsive web application crafted with React, TypeScript, Vite.</p>
+          <div class="card-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card-actions">
+            <a href="#gem-vault-essentials" class="btn btn-secondary">Project Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="gemstone-reserve-link" data-category="Web Apps & SaaS" data-live="false" data-search="gemstone reserve link react typescript vite tailwind css shadcn ui tanstack_start_ts is a modern, responsive web application crafted with react, typescript, vite.">
+        <div class="card-img-wrap">
+          <img src="screenshots/gemstone-reserve-link.png" alt="Gemstone Reserve Link" loading="lazy">
+          <span class="card-status status-showcase">Showcase</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Gemstone Reserve Link</h2>
+          <p class="card-desc">tanstack_start_ts is a modern, responsive web application crafted with React, TypeScript, Vite.</p>
+          <div class="card-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card-actions">
+            <a href="#gemstone-reserve-link" class="btn btn-secondary">Project Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="portal-palace-66" data-category="Web Apps & SaaS" data-live="false" data-search="portal palace 66 react typescript vite tailwind css shadcn ui tanstack_start_ts is a modern, responsive web application crafted with react, typescript, vite.">
+        <div class="card-img-wrap">
+          <img src="screenshots/portal-palace-66.png" alt="Portal Palace 66" loading="lazy">
+          <span class="card-status status-showcase">Showcase</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Portal Palace 66</h2>
+          <p class="card-desc">tanstack_start_ts is a modern, responsive web application crafted with React, TypeScript, Vite.</p>
+          <div class="card-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card-actions">
+            <a href="#portal-palace-66" class="btn btn-secondary">Project Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="info-weave-design" data-category="Web Apps & SaaS" data-live="false" data-search="info weave design react typescript vite tailwind css shadcn ui tanstack_start_ts is a modern, responsive web application crafted with react, typescript, vite.">
+        <div class="card-img-wrap">
+          <img src="screenshots/info-weave-design.png" alt="Info Weave Design" loading="lazy">
+          <span class="card-status status-showcase">Showcase</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Info Weave Design</h2>
+          <p class="card-desc">tanstack_start_ts is a modern, responsive web application crafted with React, TypeScript, Vite.</p>
+          <div class="card-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card-actions">
+            <a href="#info-weave-design" class="btn btn-secondary">Project Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="rhythmic-render" data-category="Web Apps & SaaS" data-live="false" data-search="rhythmic render react typescript vite tailwind css shadcn ui tanstack_start_ts is a modern, responsive web application crafted with react, typescript, vite.">
+        <div class="card-img-wrap">
+          <img src="screenshots/rhythmic-render.png" alt="Rhythmic Render" loading="lazy">
+          <span class="card-status status-showcase">Showcase</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Rhythmic Render</h2>
+          <p class="card-desc">tanstack_start_ts is a modern, responsive web application crafted with React, TypeScript, Vite.</p>
+          <div class="card-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card-actions">
+            <a href="#rhythmic-render" class="btn btn-secondary">Project Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="jib-roadside-reboot" data-category="Web Apps & SaaS" data-live="false" data-search="jib roadside reboot react typescript vite tailwind css shadcn ui tanstack_start_ts is a modern, responsive web application crafted with react, typescript, vite.">
+        <div class="card-img-wrap">
+          <img src="screenshots/jib-roadside-reboot.png" alt="Jib Roadside Reboot" loading="lazy">
+          <span class="card-status status-showcase">Showcase</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Jib Roadside Reboot</h2>
+          <p class="card-desc">tanstack_start_ts is a modern, responsive web application crafted with React, TypeScript, Vite.</p>
+          <div class="card-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card-actions">
+            <a href="#jib-roadside-reboot" class="btn btn-secondary">Project Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="outpost-secure-lead" data-category="Web Apps & SaaS" data-live="false" data-search="outpost secure lead react typescript vite tailwind css shadcn ui tanstack_start_ts is a modern, responsive web application crafted with react, typescript, vite.">
+        <div class="card-img-wrap">
+          <img src="screenshots/outpost-secure-lead.png" alt="Outpost Secure Lead" loading="lazy">
+          <span class="card-status status-showcase">Showcase</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Outpost Secure Lead</h2>
+          <p class="card-desc">tanstack_start_ts is a modern, responsive web application crafted with React, TypeScript, Vite.</p>
+          <div class="card-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card-actions">
+            <a href="#outpost-secure-lead" class="btn btn-secondary">Project Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="nexus-robot-connect" data-category="Web Apps & SaaS" data-live="false" data-search="nexus robot connect react typescript vite tailwind css shadcn ui tanstack_start_ts is a modern, responsive web application crafted with react, typescript, vite.">
+        <div class="card-img-wrap">
+          <img src="screenshots/nexus-robot-connect.png" alt="Nexus Robot Connect" loading="lazy">
+          <span class="card-status status-showcase">Showcase</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Nexus Robot Connect</h2>
+          <p class="card-desc">tanstack_start_ts is a modern, responsive web application crafted with React, TypeScript, Vite.</p>
+          <div class="card-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card-actions">
+            <a href="#nexus-robot-connect" class="btn btn-secondary">Project Details</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="omega-next-leap" data-category="UI/UX & Landing" data-live="true" data-search="omega cst — custom software, automation &amp; ai solutions in uae react typescript vite tailwind css shadcn ui a responsive, high-performance web solution designed with react, typescript, vite.">
+        <div class="card-img-wrap">
+          <img src="screenshots/omega-next-leap.png" alt="Omega CST — Custom Software, Automation &amp; AI Solutions in UAE" loading="lazy">
+          <span class="card-status status-live">⚡ Live Demo</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Omega CST — Custom Software, Automation &amp; AI Solutions in UAE</h2>
+          <p class="card-desc">A responsive, high-performance web platform featuring modern UI/UX design, interactive layouts, and scalable architecture built with React, TypeScript, Vite.</p>
+          <div class="card-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card-actions">
+            <a href="projects/omega-next-leap/" target="_blank" class="btn btn-primary">Open Live Site ↗</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="remote-control-reimagined" data-category="UI/UX & Landing" data-live="true" data-search="the remote control co - replacement tv &amp; ac remotes | australia react typescript vite tailwind css shadcn ui a responsive, high-performance web solution designed with react, typescript, vite.">
+        <div class="card-img-wrap">
+          <img src="screenshots/remote-control-reimagined.png" alt="The Remote Control Co - Replacement TV &amp; AC Remotes | Australia" loading="lazy">
+          <span class="card-status status-live">⚡ Live Demo</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">The Remote Control Co - Replacement TV &amp; AC Remotes | Australia</h2>
+          <p class="card-desc">A responsive, high-performance web platform featuring modern UI/UX design, interactive layouts, and scalable architecture built with React, TypeScript, Vite.</p>
+          <div class="card-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card-actions">
+            <a href="projects/remote-control-reimagined/" target="_blank" class="btn btn-primary">Open Live Site ↗</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="genika-elegance-refresh" data-category="UI/UX & Landing" data-live="true" data-search="genika café – coffeehouse by day · tavern by night react typescript vite tailwind css shadcn ui a responsive, high-performance web solution designed with react, typescript, vite.">
+        <div class="card-img-wrap">
+          <img src="screenshots/genika-elegance-refresh.png" alt="Genika Café – Coffeehouse by Day · Tavern by Night" loading="lazy">
+          <span class="card-status status-live">⚡ Live Demo</span>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">Genika Café – Coffeehouse by Day · Tavern by Night</h2>
+          <p class="card-desc">A responsive, high-performance web platform featuring modern UI/UX design, interactive layouts, and scalable architecture built with React, TypeScript, Vite.</p>
+          <div class="card-tags">
+            <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span>
+          </div>
+          <div class="card-actions">
+            <a href="projects/genika-elegance-refresh/" target="_blank" class="btn btn-primary">Open Live Site ↗</a>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Zannatul Ferdousi. All rights reserved. | <a href="https://developer-zannatul.com/" target="_blank">developer-zannatul.com</a> | <a href="https://www.linkedin.com/in/zannatul-ferdousi1981/" target="_blank">LinkedIn</a></p>
+  </footer>
+
+  <script>
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.card');
+    const searchInput = document.getElementById('searchInput');
+
+    let currentFilter = 'all';
+    let searchQuery = '';
+
+    function applyFilters() {
+      cards.forEach(card => {
+        const cat = card.dataset.category;
+        const isLive = card.dataset.live === 'true';
+        const searchData = card.dataset.search;
+
+        const matchesFilter = currentFilter === 'all' 
+          || (currentFilter === 'live' && isLive)
+          || cat === currentFilter;
+
+        const matchesSearch = !searchQuery || searchData.includes(searchQuery);
+
+        if (matchesFilter && matchesSearch) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentFilter = btn.dataset.filter;
+        applyFilters();
+      });
+    });
+
+    searchInput.addEventListener('input', (e) => {
+      searchQuery = e.target.value.toLowerCase().trim();
+      applyFilters();
+    });
+  </script>
+</body>
+</html>
