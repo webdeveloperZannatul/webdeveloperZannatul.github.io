@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Griffin Brothers Properties | Commercial Real Estate in the Shoals</title>
+  <meta name="author" content="Griffin Brothers Properties" />
+  <meta name="description" content="Family-owned commercial real estate ownership and development in the Shoals, Alabama. Retail, flex, land leases, build to suit and residential." />
+  <meta property="og:title" content="Griffin Brothers Properties | The Shoals, Alabama" />
+  <meta property="og:description" content="We own it. We build it. We make it work. Commercial real estate in the Shoals." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&amp;family=Barlow:wght@300;400;500;600&amp;display=swap" />
+  <link rel="stylesheet" href="assets/styles-CbiOHovw.css" />
+  <link rel="icon" href="images/Griffin Brothers new logo.jpg" type="image/jpeg" />
+
+  <style>
+    /* Reveal animation styles */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    header.scrolled {
+      background-color: rgba(28, 28, 28, 0.95) !important;
+      backdrop-filter: blur(8px);
+      border-bottom-color: rgba(255, 255, 255, 0.1) !important;
+      padding-top: 0.5rem !important;
+      padding-bottom: 0.5rem !important;
+    }
+    /* Smooth link underline transition */
+    .link-underline {
+      position: relative;
+      display: inline-block;
+    }
+    .link-underline::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 1px;
+      bottom: -2px;
+      left: 0;
+      background-color: var(--gold, #c8a355);
+      transition: width 0.3s ease;
+    }
+    .link-underline:hover::after {
+      width: 100%;
+    }
+    .mobile-menu-open {
+      max-height: 400px !important;
+    }
+  </style>
+</head>
+<body class="bg-background text-foreground font-sans antialiased selection:bg-gold selection:text-charcoal">
+  <!-- Header -->
+  <header id="main-header" class="fixed inset-x-0 top-0 z-50 transition-all duration-500 border-b border-transparent bg-transparent py-4">
+    <div class="mx-auto grid max-w-[1240px] grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-5 sm:px-8">
+      <a aria-label="Griffin Brothers Properties — home" class="flex min-w-0 items-center" href="#top">
+        <img src="images/Griffin Brothers new logo.jpg" alt="Griffin Brothers Properties" width="807" height="283" class="w-auto shrink-0 transition-all duration-500 h-12 sm:h-14 rounded-sm object-contain" />
+      </a>
+      <nav class="hidden items-center gap-8 lg:flex" aria-label="Primary">
+        <a href="#top" class="link-underline eyebrow text-ivory/85 transition-colors hover:text-ivory">Home</a>
+        <a href="#divisions" class="link-underline eyebrow text-ivory/85 transition-colors hover:text-ivory">Divisions</a>
+        <a href="#locations" class="link-underline eyebrow text-ivory/85 transition-colors hover:text-ivory">Property Locations</a>
+        <a href="gallery.html" class="link-underline eyebrow text-ivory/85 transition-colors hover:text-ivory">Gallery</a>
+        <a href="#about" class="link-underline eyebrow text-ivory/85 transition-colors hover:text-ivory">About</a>
+        <a href="#contact" class="link-underline eyebrow text-ivory/85 transition-colors hover:text-ivory">Contact</a>
+      </nav>
+      <button id="menu-btn" type="button" aria-expanded="false" aria-label="Open menu" class="flex h-11 w-11 flex-col items-center justify-center gap-[6px] justify-self-end lg:hidden showcase-pointer">
+        <span class="block h-px w-7 bg-ivory transition-transform duration-300"></span>
+        <span class="block h-px w-7 bg-ivory transition-opacity duration-300"></span>
+        <span class="block h-px w-7 bg-ivory transition-transform duration-300"></span>
+      </button>
+    </div>
+    <div id="mobile-nav" class="overflow-hidden bg-charcoal transition-[max-height] duration-500 lg:hidden max-h-0">
+      <nav class="flex flex-col gap-1 px-6 py-6" aria-label="Mobile">
+        <a href="#top" class="mobile-link border-b border-white/10 py-4 font-display text-2xl text-ivory">Home</a>
+        <a href="#divisions" class="mobile-link border-b border-white/10 py-4 font-display text-2xl text-ivory">Divisions</a>
+        <a href="#locations" class="mobile-link border-b border-white/10 py-4 font-display text-2xl text-ivory">Property Locations</a>
+        <a href="gallery.html" class="mobile-link border-b border-white/10 py-4 font-display text-2xl text-ivory">Gallery</a>
+        <a href="#about" class="mobile-link border-b border-white/10 py-4 font-display text-2xl text-ivory">About</a>
+        <a href="#contact" class="mobile-link border-b border-white/10 py-4 font-display text-2xl text-ivory">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero Section -->
+    <section class="relative flex min-h-[92svh] items-end overflow-hidden">
+      <img src="images/Hero Page  top photo.jpeg" alt="Refine Home Store + Design, a Griffin Brothers Properties retail building in the Shoals" width="1920" height="1440" class="absolute inset-0 h-full w-full object-cover object-[58%_45%]" />
+      <div class="absolute inset-0 bg-[linear-gradient(180deg,oklch(0.19_0.008_120/0.72)_0%,oklch(0.19_0.008_120/0.35)_38%,oklch(0.19_0.008_120/0.85)_100%)]" aria-hidden="true"></div>
+      <div class="absolute inset-x-0 bottom-0 h-24 wood-lines opacity-25" aria-hidden="true"></div>
+      <div class="relative mx-auto w-full max-w-[1240px] px-5 pb-24 pt-40 sm:px-8 sm:pb-28">
+        <p class="eyebrow text-gold">Commercial Real Estate • The Shoals</p>
+        <h1 class="mt-6 max-w-4xl text-[2.6rem] leading-[1.03] text-ivory sm:text-6xl lg:text-7xl">We own it. We build it. We make it work.</h1>
+        <p class="mt-6 max-w-xl text-base leading-relaxed text-ivory/80 sm:text-lg">Commercial real estate ownership and development in the Shoals.</p>
+        <div class="mt-10 flex flex-wrap gap-4">
+          <a href="#locations" class="group inline-flex items-center gap-3 border border-gold bg-gold/90 px-7 py-4 eyebrow text-charcoal transition-all hover:bg-gold hover:shadow-lg">
+            View Our Properties<span class="transition-transform group-hover:translate-x-1">→</span>
+          </a>
+          <a href="#divisions" class="group inline-flex items-center gap-3 border border-ivory/40 px-7 py-4 eyebrow text-ivory transition-all hover:border-ivory hover:bg-ivory/10">
+            Explore Our Divisions<span class="transition-transform group-hover:translate-x-1">→</span>
+          </a>
+        </div>
+      </div>
+      <a href="#story" aria-label="Scroll to our story" class="absolute bottom-6 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 text-ivory/60 transition-colors hover:text-ivory sm:flex">
+        <span class="eyebrow text-[0.58rem]">Scroll</span>
+        <span class="block h-10 w-px animate-pulse bg-ivory/50"></span>
+      </a>
+    </section>
+
+    <!-- Our Story Section -->
+    <section id="story" class="relative overflow-hidden bg-background py-20 sm:py-28">
+      <div class="absolute inset-y-0 left-0 w-1/3 wood-lines opacity-40" aria-hidden="true"></div>
+      <svg viewBox="0 0 200 200" aria-hidden="true" class="pointer-events-none absolute -left-16 top-16 h-80 w-80 text-wood/10" fill="none" stroke="currentColor" stroke-width="0.8" stroke-linecap="round">
+        <path d="M118 44c-14-16-34-22-52-14 12 2 20 8 26 16"></path>
+        <path d="M112 58c-20-4-38 6-46 24 14-12 28-16 44-12"></path>
+        <path d="M104 78c-24 2-42 18-48 42 16-20 34-30 54-30"></path>
+        <path d="M118 44c14 4 24 16 24 32 0 26-18 44-18 70"></path>
+        <path d="M124 146c8 6 18 8 30 6"></path>
+        <path d="M142 76c10 6 18 16 22 28"></path>
+        <circle cx="128" cy="52" r="2.5"></circle>
+        <path d="M60 172h100"></path>
+        <path d="M74 172V96M160 172V60"></path>
+      </svg>
+      <div class="relative mx-auto grid max-w-[1240px] items-center gap-12 px-5 sm:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-20">
+        <figure class="reveal relative">
+          <div class="absolute -left-4 -top-4 h-24 w-24 border-l border-t border-accent/50" aria-hidden="true"></div>
+          <img src="images/Jeff and Lynn clean digital ink illustration art.png" alt="Illustration of Jeff and Lynn Griffin outside a Griffin Brothers building" width="850" height="428" loading="lazy" class="w-full border border-border bg-card shadow-[var(--shadow-soft)] rounded-sm object-cover" />
+          <figcaption class="mt-4 eyebrow text-[0.6rem] text-muted-foreground">Built on Faith, Family &amp; Integrity</figcaption>
+        </figure>
+        <div class="reveal">
+          <p class="eyebrow text-wood">Our Story</p>
+          <p class="mt-7 font-display text-2xl leading-[1.45] text-foreground sm:text-[1.9rem]">We’re a family-owned real estate company with deep roots in the Shoals. Our approach is simple: build carefully, own for the long term, and treat every property and tenant like it matters - because to us, it does.</p>
+          <div class="flex items-center gap-4 mt-10" aria-hidden="true">
+            <span class="h-px w-16 rule-gold"></span>
+            <svg viewBox="0 0 48 24" class="h-4 w-8 text-accent" fill="none" stroke="currentColor" stroke-width="1">
+              <path d="M2 18c8 0 12-4 14-8 2 4 6 8 14 8"></path>
+              <path d="M10 20c6 0 10-3 12-6 2 3 6 6 12 6" opacity=".6"></path>
+              <path d="M24 4v6"></path>
+            </svg>
+            <span class="h-px w-16 rule-gold rotate-180"></span>
+          </div>
+          <a href="#about" class="link-underline mt-8 inline-block eyebrow text-charcoal">Meet the Family →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Divisions Section -->
+    <section id="divisions" class="bg-charcoal py-20 text-ivory sm:py-28">
+      <div class="mx-auto max-w-[1240px] px-5 sm:px-8">
+        <div class="reveal flex flex-col gap-4 border-b border-white/10 pb-10 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p class="eyebrow text-gold/85">Divisions</p>
+            <h2 class="mt-4 text-4xl sm:text-5xl">Five ways we work.</h2>
+          </div>
+          <p class="max-w-sm text-sm leading-relaxed text-ivory/60">Every building is owned, leased and looked after by us — not by a management company two states away.</p>
+        </div>
+
+        <div class="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-6">
+          <!-- Retail -->
+          <article class="reveal group relative overflow-hidden border border-white/10 lg:col-span-3">
+            <div class="overflow-hidden aspect-[16/10]">
+              <img src="images/Retail.jpg" alt="Retail property" loading="lazy" class="h-full w-full object-cover transition-transform duration-[1100ms] ease-out group-hover:scale-105" />
+            </div>
+            <div class="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,transparent_35%,oklch(0.19_0.008_120/0.9)_100%)]" aria-hidden="true"></div>
+            <div class="absolute inset-x-0 bottom-0 p-6">
+              <h3 class="text-2xl text-ivory">Retail</h3>
+              <p class="mt-2 max-w-xs text-sm leading-relaxed text-ivory/70">Storefronts on main corridors, leased to local businesses we know by name.</p>
+              <a href="#contact" class="mt-4 inline-flex items-center gap-2 eyebrow text-[0.6rem] text-gold opacity-0 transition-all duration-500 group-hover:opacity-100">Explore <span aria-hidden="true">→</span></a>
+            </div>
+            <span class="absolute left-0 top-0 h-px w-0 bg-gold transition-all duration-700 group-hover:w-full" aria-hidden="true"></span>
+          </article>
+
+          <!-- Flex -->
+          <article class="reveal group relative overflow-hidden border border-white/10 lg:col-span-3">
+            <div class="overflow-hidden aspect-[16/10]">
+              <img src="images/Flex space.jpeg" alt="Flex property" loading="lazy" class="h-full w-full object-cover transition-transform duration-[1100ms] ease-out group-hover:scale-105" />
+            </div>
+            <div class="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,transparent_35%,oklch(0.19_0.008_120/0.9)_100%)]" aria-hidden="true"></div>
+            <div class="absolute inset-x-0 bottom-0 p-6">
+              <h3 class="text-2xl text-ivory">Flex</h3>
+              <p class="mt-2 max-w-xs text-sm leading-relaxed text-ivory/70">Warehouse, studio and light industrial suites built for growing operators.</p>
+              <a href="#contact" class="mt-4 inline-flex items-center gap-2 eyebrow text-[0.6rem] text-gold opacity-0 transition-all duration-500 group-hover:opacity-100">Explore <span aria-hidden="true">→</span></a>
+            </div>
+            <span class="absolute left-0 top-0 h-px w-0 bg-gold transition-all duration-700 group-hover:w-full" aria-hidden="true"></span>
+          </article>
+
+          <!-- Land Leases -->
+          <article class="reveal group relative overflow-hidden border border-white/10 lg:col-span-2">
+            <div class="overflow-hidden aspect-[4/3]">
+              <img src="images/Land Leases.jpeg" alt="Land Leases property" loading="lazy" class="h-full w-full object-cover transition-transform duration-[1100ms] ease-out group-hover:scale-105" />
+            </div>
+            <div class="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,transparent_35%,oklch(0.19_0.008_120/0.9)_100%)]" aria-hidden="true"></div>
+            <div class="absolute inset-x-0 bottom-0 p-6">
+              <h3 class="text-2xl text-ivory">Land Leases</h3>
+              <p class="mt-2 max-w-xs text-sm leading-relaxed text-ivory/70">Well-positioned parcels held for the long term and leased with intent.</p>
+              <a href="#contact" class="mt-4 inline-flex items-center gap-2 eyebrow text-[0.6rem] text-gold opacity-0 transition-all duration-500 group-hover:opacity-100">Explore <span aria-hidden="true">→</span></a>
+            </div>
+            <span class="absolute left-0 top-0 h-px w-0 bg-gold transition-all duration-700 group-hover:w-full" aria-hidden="true"></span>
+          </article>
+
+          <!-- Build to Suit -->
+          <article class="reveal group relative overflow-hidden border border-white/10 lg:col-span-2">
+            <div class="overflow-hidden aspect-[4/3]">
+              <img src="images/Build to Suit.PNG" alt="Build to Suit property" loading="lazy" class="h-full w-full object-cover transition-transform duration-[1100ms] ease-out group-hover:scale-105" />
+            </div>
+            <div class="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,transparent_35%,oklch(0.19_0.008_120/0.9)_100%)]" aria-hidden="true"></div>
+            <div class="absolute inset-x-0 bottom-0 p-6">
+              <h3 class="text-2xl text-ivory">Build to Suit</h3>
+              <p class="mt-2 max-w-xs text-sm leading-relaxed text-ivory/70">Ground-up buildings designed around one tenant's plan and timeline.</p>
+              <a href="#contact" class="mt-4 inline-flex items-center gap-2 eyebrow text-[0.6rem] text-gold opacity-0 transition-all duration-500 group-hover:opacity-100">Explore <span aria-hidden="true">→</span></a>
+            </div>
+            <span class="absolute left-0 top-0 h-px w-0 bg-gold transition-all duration-700 group-hover:w-full" aria-hidden="true"></span>
+          </article>
+
+          <!-- Residential Portfolio -->
+          <article class="reveal group relative overflow-hidden border border-white/10 lg:col-span-2">
+            <div class="overflow-hidden aspect-[4/3]">
+              <img src="images/residential.jpg" alt="Residential property in the Shoals" loading="lazy" class="h-full w-full object-cover transition-transform duration-[1100ms] ease-out group-hover:scale-105" />
+            </div>
+            <div class="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,transparent_35%,oklch(0.19_0.008_120/0.9)_100%)]" aria-hidden="true"></div>
+            <div class="absolute inset-x-0 bottom-0 p-6">
+              <h3 class="text-2xl text-ivory">Residential</h3>
+              <p class="mt-2 max-w-xs text-sm leading-relaxed text-ivory/70">A small, carefully maintained residential portfolio across the Shoals.</p>
+              <a href="#contact" class="mt-4 inline-flex items-center gap-2 eyebrow text-[0.6rem] text-gold opacity-0 transition-all duration-500 group-hover:opacity-100">Explore <span aria-hidden="true">→</span></a>
+            </div>
+            <span class="absolute left-0 top-0 h-px w-0 bg-gold transition-all duration-700 group-hover:w-full" aria-hidden="true"></span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Property Locations Section -->
+    <section id="locations" class="relative overflow-hidden bg-background py-20 sm:py-28">
+      <div class="absolute inset-x-0 top-0 h-16 wood-lines opacity-30" aria-hidden="true"></div>
+      <div class="relative mx-auto max-w-[1240px] px-5 sm:px-8">
+        <div class="reveal max-w-2xl">
+          <p class="eyebrow text-wood">Property Locations</p>
+          <h2 class="mt-4 text-4xl sm:text-5xl">Places we own and stand behind.</h2>
+        </div>
+
+        <div class="mt-12 grid gap-px border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
+          <!-- Shoppes on 2nd -->
+          <article class="reveal group relative flex min-h-[220px] flex-col items-center justify-center gap-6 bg-card p-8 transition-colors duration-500 hover:bg-charcoal">
+            <img src="images/shoppers on 2nd.png" alt="Shoppes on 2nd logo" loading="lazy" class="h-28 w-auto max-w-[220px] object-contain transition-all duration-500 group-hover:opacity-0" />
+            <div class="pointer-events-none absolute inset-0 flex flex-col items-center justify-center gap-3 px-6 text-center opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+              <h3 class="text-2xl text-ivory">Shoppes on 2nd</h3>
+              <span class="eyebrow text-[0.6rem] text-gold">The Shoals, Alabama</span>
+            </div>
+          </article>
+
+          <!-- Wilson Crossing -->
+          <article class="reveal group relative flex min-h-[220px] flex-col items-center justify-center gap-6 bg-card p-8 transition-colors duration-500 hover:bg-charcoal">
+            <img src="images/Wilson crossing.png" alt="Wilson Crossing logo" loading="lazy" class="h-28 w-auto max-w-[220px] object-contain transition-all duration-500 group-hover:opacity-0" />
+            <div class="pointer-events-none absolute inset-0 flex flex-col items-center justify-center gap-3 px-6 text-center opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+              <h3 class="text-2xl text-ivory">Wilson Crossing</h3>
+              <span class="eyebrow text-[0.6rem] text-gold">The Shoals, Alabama</span>
+            </div>
+          </article>
+
+          <!-- Airport Business Park -->
+          <article class="reveal group relative flex min-h-[220px] flex-col items-center justify-center gap-6 bg-card p-8 transition-colors duration-500 hover:bg-charcoal">
+            <img src="images/Airport business oark.png" alt="Airport Business Park logo" loading="lazy" class="h-28 w-auto max-w-[220px] object-contain transition-all duration-500 group-hover:opacity-0" />
+            <div class="pointer-events-none absolute inset-0 flex flex-col items-center justify-center gap-3 px-6 text-center opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+              <h3 class="text-2xl text-ivory">Airport Business Park</h3>
+              <span class="eyebrow text-[0.6rem] text-gold">The Shoals, Alabama</span>
+            </div>
+          </article>
+
+          <!-- Hwy 72 Business Park -->
+          <article class="reveal group relative flex min-h-[220px] flex-col items-center justify-center gap-6 bg-card p-8 transition-colors duration-500 hover:bg-charcoal">
+            <img src="images/HWY 72.png" alt="Hwy 72 Business Park logo" loading="lazy" class="h-28 w-auto max-w-[220px] object-contain transition-all duration-500 group-hover:opacity-0" />
+            <div class="pointer-events-none absolute inset-0 flex flex-col items-center justify-center gap-3 px-6 text-center opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+              <h3 class="text-2xl text-ivory">Hwy 72 Business Park</h3>
+              <span class="eyebrow text-[0.6rem] text-gold">The Shoals, Alabama</span>
+            </div>
+          </article>
+
+          <!-- Mini Flex of the Shoals -->
+          <article class="reveal group relative flex min-h-[220px] flex-col items-center justify-center gap-6 bg-card p-8 transition-colors duration-500 hover:bg-charcoal">
+            <img src="images/mini fles of the shoals.png" alt="Mini Flex of the Shoals logo" loading="lazy" class="h-28 w-auto max-w-[220px] object-contain transition-all duration-500 group-hover:opacity-0" />
+            <div class="pointer-events-none absolute inset-0 flex flex-col items-center justify-center gap-3 px-6 text-center opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+              <h3 class="text-2xl text-ivory">Mini Flex of the Shoals</h3>
+              <span class="eyebrow text-[0.6rem] text-gold">The Shoals, Alabama</span>
+            </div>
+          </article>
+
+          <!-- Inquire Card -->
+          <article class="reveal flex min-h-[220px] flex-col items-center justify-center gap-4 bg-card p-8 text-center">
+            <p class="max-w-[220px] text-sm leading-relaxed text-muted-foreground">Looking for space in one of our locations?</p>
+            <a href="#contact" class="link-underline eyebrow text-charcoal">Ask About Availability →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- About & Contact Section -->
+    <section id="about" class="relative overflow-hidden bg-charcoal py-20 text-ivory sm:py-28">
+      <svg viewBox="0 0 200 200" aria-hidden="true" class="pointer-events-none absolute -right-20 top-10 h-96 w-96 text-gold/[0.07]" fill="none" stroke="currentColor" stroke-width="0.8" stroke-linecap="round">
+        <path d="M118 44c-14-16-34-22-52-14 12 2 20 8 26 16"></path>
+        <path d="M112 58c-20-4-38 6-46 24 14-12 28-16 44-12"></path>
+        <path d="M104 78c-24 2-42 18-48 42 16-20 34-30 54-30"></path>
+        <path d="M118 44c14 4 24 16 24 32 0 26-18 44-18 70"></path>
+        <path d="M124 146c8 6 18 8 30 6"></path>
+        <path d="M142 76c10 6 18 16 22 28"></path>
+        <circle cx="128" cy="52" r="2.5"></circle>
+        <path d="M60 172h100"></path>
+        <path d="M74 172V96M160 172V60"></path>
+      </svg>
+      <div class="relative mx-auto max-w-[1240px] px-5 sm:px-8">
+        <div class="reveal grid gap-10 border-b border-white/10 pb-14 lg:grid-cols-[1fr_1fr] lg:gap-20">
+          <div>
+            <p class="eyebrow text-gold/85">About</p>
+            <h2 class="mt-4 max-w-lg text-4xl leading-tight sm:text-5xl">Let’s build something that works.</h2>
+          </div>
+          <p class="max-w-lg self-end text-base leading-relaxed text-ivory/70">Two brothers, one family, and a portfolio built one building at a time across the Shoals. We answer our own phone, we know our tenants, and we plan in decades rather than quarters.</p>
+        </div>
+
+        <div id="contact" class="grid gap-12 pt-14 lg:grid-cols-[1fr_1fr] lg:gap-16">
+          <form id="contact-form" class="reveal">
+            <p class="eyebrow text-gold/85">Contact</p>
+            <div class="mt-8 grid gap-6 sm:grid-cols-2">
+              <div>
+                <label for="name" class="eyebrow text-[0.6rem] text-ivory/55">Name</label>
+                <input id="name" type="text" required class="mt-3 w-full border-b border-white/20 bg-transparent pb-3 text-ivory outline-none transition-colors focus:border-gold" name="name" />
+              </div>
+              <div>
+                <label for="email" class="eyebrow text-[0.6rem] text-ivory/55">Email</label>
+                <input id="email" type="email" required class="mt-3 w-full border-b border-white/20 bg-transparent pb-3 text-ivory outline-none transition-colors focus:border-gold" name="email" />
+              </div>
+              <div class="sm:col-span-2">
+                <div>
+                  <label for="phone" class="eyebrow text-[0.6rem] text-ivory/55">Phone</label>
+                  <input id="phone" type="tel" class="mt-3 w-full border-b border-white/20 bg-transparent pb-3 text-ivory outline-none transition-colors focus:border-gold" name="phone" />
+                </div>
+              </div>
+              <div class="sm:col-span-2">
+                <label for="message" class="eyebrow text-[0.6rem] text-ivory/55">Message</label>
+                <textarea id="message" name="message" rows="4" required class="mt-3 w-full border-b border-white/20 bg-transparent pb-3 text-ivory outline-none transition-colors placeholder:text-ivory/25 focus:border-gold" placeholder="Tell us what you're looking for."></textarea>
+              </div>
+            </div>
+            <button type="submit" class="group mt-10 inline-flex items-center gap-3 border border-gold bg-gold/90 px-8 py-4 eyebrow text-charcoal transition-all hover:bg-gold hover:shadow-lg showcase-pointer">
+              Start a Conversation<span class="transition-transform group-hover:translate-x-1">→</span>
+            </button>
+            <p id="form-feedback" aria-live="polite" class="mt-4 h-5 text-sm text-gold/90"></p>
+          </form>
+
+          <div class="reveal flex flex-col gap-8">
+            <div class="overflow-hidden border border-white/10 rounded-sm">
+              <iframe title="Map of the Shoals, Alabama" src="https://www.google.com/maps?q=Florence,%20Alabama&amp;z=12&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="h-[260px] w-full grayscale-[35%]"></iframe>
+            </div>
+            <dl class="grid gap-6 sm:grid-cols-2">
+              <div>
+                <dt class="eyebrow text-[0.6rem] text-ivory/45">Office</dt>
+                <dd class="mt-2 text-sm text-ivory/80">The Shoals, Alabama</dd>
+              </div>
+              <div>
+                <dt class="eyebrow text-[0.6rem] text-ivory/45">Email</dt>
+                <dd class="mt-2 text-sm text-ivory/80"><a href="mailto:info@griffinbrothersproperties.com" class="link-underline">info@griffinbrothersproperties.com</a></dd>
+              </div>
+              <div>
+                <dt class="eyebrow text-[0.6rem] text-ivory/45">Phone</dt>
+                <dd class="mt-2 text-sm text-ivory/80"><a href="tel:+12560000000" class="link-underline">(256) 000-0000</a></dd>
+              </div>
+              <div>
+                <dt class="eyebrow text-[0.6rem] text-ivory/45">Gallery</dt>
+                <dd class="mt-2 text-sm text-ivory/80"><a href="gallery.html" class="link-underline text-gold">View our photographs →</a></dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="relative overflow-hidden bg-charcoal text-ivory">
+    <div class="absolute inset-x-0 top-0 h-px wood-lines opacity-60" aria-hidden="true"></div>
+    <svg viewBox="0 0 200 200" aria-hidden="true" class="pointer-events-none absolute -right-10 bottom-0 h-72 w-72 text-gold/10" fill="none" stroke="currentColor" stroke-width="0.8" stroke-linecap="round">
+      <path d="M118 44c-14-16-34-22-52-14 12 2 20 8 26 16"></path>
+      <path d="M112 58c-20-4-38 6-46 24 14-12 28-16 44-12"></path>
+      <path d="M104 78c-24 2-42 18-48 42 16-20 34-30 54-30"></path>
+      <path d="M118 44c14 4 24 16 24 32 0 26-18 44-18 70"></path>
+      <path d="M124 146c8 6 18 8 30 6"></path>
+      <path d="M142 76c10 6 18 16 22 28"></path>
+      <circle cx="128" cy="52" r="2.5"></circle>
+      <path d="M60 172h100"></path>
+      <path d="M74 172V96M160 172V60"></path>
+    </svg>
+    <div class="mx-auto grid max-w-[1240px] gap-12 px-5 py-16 sm:px-8 md:grid-cols-[1.4fr_1fr_1fr]">
+      <div>
+        <img src="images/Griffin Brothers new logo.jpg" alt="Griffin Brothers Properties" width="807" height="283" loading="lazy" class="h-14 w-auto rounded-sm object-contain" />
+        <p class="mt-6 max-w-sm text-sm leading-relaxed text-ivory/65">A family-owned commercial real estate company in the Shoals. We build carefully, own for the long term, and stay close to the people in our buildings.</p>
+      </div>
+      <nav aria-label="Footer">
+        <h3 class="eyebrow text-gold/80">Explore</h3>
+        <ul class="mt-5 space-y-3 text-sm text-ivory/75">
+          <li><a href="#divisions" class="link-underline">Divisions</a></li>
+          <li><a href="#locations" class="link-underline">Property Locations</a></li>
+          <li><a href="#about" class="link-underline">About</a></li>
+          <li><a href="#contact" class="link-underline">Contact</a></li>
+          <li><a href="gallery.html" class="link-underline">Gallery</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h3 class="eyebrow text-gold/80">Contact</h3>
+        <ul class="mt-5 space-y-3 text-sm text-ivory/75">
+          <li>The Shoals, Alabama</li>
+          <li><a href="mailto:info@griffinbrothersproperties.com" class="link-underline">info@griffinbrothersproperties.com</a></li>
+          <li><a href="tel:+12560000000" class="link-underline">(256) 000-0000</a></li>
+          <li class="pt-2 text-ivory/45">Mon – Fri · By appointment</li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-white/10">
+      <div class="mx-auto flex max-w-[1240px] flex-col gap-2 px-5 py-6 text-xs text-ivory/45 sm:flex-row sm:items-center sm:justify-between sm:px-8">
+        <p>© 2026 Griffin Brothers Properties. All rights reserved. Developed by Zannatul.</p>
+        <p class="eyebrow text-[0.6rem] text-ivory/35">Built on Faith, Family &amp; Integrity</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Header scroll background effect
+    const header = document.getElementById('main-header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 40) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+
+    // Mobile navigation toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileNav = document.getElementById('mobile-nav');
+    if (menuBtn && mobileNav) {
+      menuBtn.addEventListener('click', () => {
+        const isOpen = mobileNav.classList.toggle('mobile-menu-open');
+        menuBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      });
+      document.querySelectorAll('.mobile-link').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileNav.classList.remove('mobile-menu-open');
+          menuBtn.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
+
+    // Scroll reveal with IntersectionObserver
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, { threshold: 0.12 });
+    reveals.forEach(el => observer.observe(el));
+
+    // Contact Form handling
+    const form = document.getElementById('contact-form');
+    const feedback = document.getElementById('form-feedback');
+    if (form && feedback) {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        feedback.textContent = 'Thank you for reaching out. We will get back to you shortly.';
+        form.reset();
+        setTimeout(() => {
+          feedback.textContent = '';
+        }, 6000);
+      });
+    }
+  </script>
+</body>
+</html>

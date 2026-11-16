@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Summit Personal Growth — Zannatul Ferdousi</title>
+  <meta name="description" content="Act as a senior SaaS product designer and UI/UX strategist. Redesign Evolmeo.ai, an enterprise conversational AI coaching and personal-growth platform, into a premium, credible, conversion-foc...">
+  <meta name="author" content="Zannatul Ferdousi">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="alternate icon" href="../favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b0f19;
+      --card-bg: #111827;
+      --card-border: #1f2937;
+      --primary: #38bdf8;
+      --primary-hover: #0284c7;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    nav {
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 100%;
+      padding: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--card-border);
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+    .back-btn {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+    .back-btn:hover { text-decoration: underline; }
+    main {
+      max-width: 1000px;
+      margin: 2.5rem auto;
+      padding: 0 1.5rem;
+      flex-grow: 1;
+      width: 100%;
+    }
+    .badge {
+      display: inline-block;
+      padding: 0.3rem 0.8rem;
+      background: rgba(56, 189, 248, 0.1);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      color: var(--primary);
+      border-radius: 9999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      font-weight: 700;
+      margin-bottom: 1rem;
+      letter-spacing: -0.02em;
+    }
+    p.lead {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+      max-width: 800px;
+    }
+    .mockup-container {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+      margin-bottom: 2.5rem;
+    }
+    .browser-bar {
+      background: #1e293b;
+      padding: 0.75rem 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+    .dot-red { background: #ef4444; }
+    .dot-yellow { background: #f59e0b; }
+    .dot-green { background: #10b981; }
+    .mockup-img {
+      width: 100%;
+      height: auto;
+      max-height: 600px;
+      object-fit: cover;
+      display: block;
+    }
+    .details-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+    }
+    .details-card h2 {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+      color: var(--text);
+    }
+    .tags {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.5rem;
+    }
+    .tag {
+      background: #1e293b;
+      color: #cbd5e1;
+      padding: 0.35rem 0.85rem;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+    .cta-row {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .btn {
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.95rem;
+      border: none;
+      
+    }
+    .btn-primary { background: var(--primary); color: #0b0f19; }
+    .btn-primary:hover { background: var(--primary-hover); }
+    .btn-secondary { background: #1e293b; color: #ffffff; }
+    .btn-secondary:hover { background: #334155; }
+    footer {
+      border-top: 1px solid var(--card-border);
+      padding: 2rem;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-top: auto;
+    }
+    footer a { color: var(--primary); text-decoration: none; }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="../" class="brand">
+      <svg width="28" height="28" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#0f172a"/><text x="32" y="42" font-family="system-ui" font-size="28" font-weight="800" fill="#38bdf8" text-anchor="middle">ZF</text></svg>
+      <span>Zannatul Ferdousi</span>
+    </a>
+    <a href="../" class="back-btn">← Back to All Projects</a>
+  </nav>
+
+  <main>
+    <span class="badge">Project Repository Showcase</span>
+    <h1>Summit Personal Growth</h1>
+    <p class="lead">Act as a senior SaaS product designer and UI/UX strategist. Redesign Evolmeo.ai, an enterprise conversational AI coaching and personal-growth platform, into a premium, credible, conversion-foc...</p>
+
+    <div class="mockup-container">
+      <div class="browser-bar">
+        <span class="dot dot-red"></span>
+        <span class="dot dot-yellow"></span>
+        <span class="dot dot-green"></span>
+      </div>
+      <img src="../screenshots/summit-personal-growth.png" alt="Summit Personal Growth" class="mockup-img">
+    </div>
+
+    <div class="details-card">
+      <h2>Technology Stack &amp; Implementation</h2>
+      <div class="tags">
+        <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span><span class="tag">Shadcn UI</span>
+      </div>
+      <h2>About This Project</h2>
+      <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Act as a senior SaaS product designer and UI/UX strategist. Redesign Evolmeo.ai, an enterprise conversational AI coaching and personal-growth platform, into a premium, credible, conversion-foc...</p>
+      <div class="cta-row">
+        <a href="https://www.linkedin.com/in/zannatul-ferdousi1981/" target="_blank" class="btn btn-primary">Inquire About This Project ↗</a>
+        <a href="../" class="btn btn-secondary">← Back to Portfolio</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Zannatul Ferdousi. All rights reserved. | <a href="https://developer-zannatul.com/" target="_blank">developer-zannatul.com</a> | <a href="https://www.linkedin.com/in/zannatul-ferdousi1981/" target="_blank">LinkedIn</a></p>
+  </footer>
+</body>
+</html>

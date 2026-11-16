@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+  <title>Membership | Peptide</title>
+  <meta name="description" content="Join Peptide membership for exclusive pricing, priority shipping, and points rewards on research peptides.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/membership.css">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="64x64" href="images/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+</head>
+<body>
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">
+    <div class="announcement-content">
+      <span class="announcement-text">END OF SUMMER SALE</span>
+      <span class="announcement-highlight">35% Off Sitewide</span>
+      <span class="announcement-label">CODE</span>
+      <span class="announcement-code">HEAT35</span>
+      <span class="announcement-label">ENDS IN</span>
+      <span class="announcement-timer" id="countdown-timer">9d 23h 16m 40s</span>
+    </div>
+    <div class="announcement-sun"><img src="images/image (8).svg" alt="" aria-hidden="true" class="sun-icon"></div>
+  </div>
+
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo"><img src="images/LogoMain.svg" alt="Peptide" class="logo-img"></a>
+      <nav class="main-nav" id="main-nav">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="store.html" class="nav-link">Products</a></li>
+          <li class="nav-item"><a href="subscription.html" class="nav-link">Build a Box <span class="nav-badge">NEW</span></a></li>
+          <li class="nav-item"><a href="bundles.html" class="nav-link">Bulk Orders <span class="nav-badge">NEW</span></a></li>
+          <li class="nav-item"><a href="#" class="nav-link">COAs</a></li>
+          <li class="nav-item"><a href="membership.html" class="nav-link active">Membership</a></li>
+          <li class="nav-item"><a href="affiliate.html" class="nav-link">Partner Program</a></li>
+          <li class="nav-item"><a href="bundles.html" class="nav-link">Research Bundles <span class="nav-badge">NEW</span></a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact us</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button class="header-icon-btn" aria-label="Account"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></button>
+        <button class="header-icon-btn cart-btn" aria-label="Cart"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg><span class="cart-count">0</span></button>
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menu"><span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu"><div class="mobile-menu-inner"><ul class="mobile-nav-list"><li><a href="store.html">Products</a></li><li><a href="subscription.html">Build a Box</a></li><li><a href="bundles.html">Bulk Orders</a></li><li><a href="#">COAs</a></li><li><a href="membership.html">Membership</a></li><li><a href="affiliate.html">Partner Program</a></li><li><a href="contact.html">Contact us</a></li></ul></div></div>
+
+  <main>
+    <!-- Pricing Cards -->
+    <section class="membership-pricing">
+      <div class="container">
+        <div class="pricing-grid">
+          <!-- Member (Free) -->
+          <div class="pricing-card">
+            <span class="pricing-badge current">CURRENT PLAN</span>
+            <h3 class="pricing-plan-name">Member</h3>
+            <p class="pricing-plan-desc">Start earning points on every order.</p>
+            <div class="pricing-amount">Free</div>
+            <div class="pricing-features">
+              <div class="pricing-feature">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                2.5× points per $1
+              </div>
+              <div class="pricing-feature disabled">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#cbd5e1" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                Free standard shipping
+              </div>
+              <div class="pricing-feature disabled">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#cbd5e1" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                Free 2-day shipping
+              </div>
+              <div class="pricing-feature disabled">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#cbd5e1" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                Early access + member drops
+              </div>
+              <div class="pricing-feature disabled">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#cbd5e1" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                Priority fulfillment (ships first)
+              </div>
+            </div>
+            <button class="btn btn-outline" style="width:100%;">Your current plan</button>
+          </div>
+
+          <!-- Insider $9.99 -->
+          <div class="pricing-card">
+            <h3 class="pricing-plan-name">Insider</h3>
+            <p class="pricing-plan-desc">Free standard shipping + boosted points.</p>
+            <div class="pricing-amount">$9.99 <span>/mo</span></div>
+            <p class="pricing-yearly">$89.90 billed yearly <span class="pricing-free-badge">2 Months Free</span></p>
+            <div class="pricing-features">
+              <div class="pricing-feature">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                3.5× points per $1
+              </div>
+              <div class="pricing-feature">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                Free standard shipping
+              </div>
+              <div class="pricing-feature disabled">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#cbd5e1" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                Free 2-day shipping
+              </div>
+              <div class="pricing-feature disabled">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#cbd5e1" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                Early access + member drops
+              </div>
+              <div class="pricing-feature disabled">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#cbd5e1" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                Priority fulfillment (ships first)
+              </div>
+            </div>
+            <button class="btn btn-dark" style="width:100%;">Choose Insider</button>
+          </div>
+
+          <!-- VIP $19.99 -->
+          <div class="pricing-card popular">
+            <span class="pricing-badge popular">MOST POPULAR</span>
+            <h3 class="pricing-plan-name">VIP</h3>
+            <p class="pricing-plan-desc">Free 2-day shipping + early access.</p>
+            <div class="pricing-amount">$19.99 <span>/mo</span></div>
+            <p class="pricing-yearly">$199.90 billed yearly <span class="pricing-free-badge">2 Months Free</span></p>
+            <div class="pricing-features">
+              <div class="pricing-feature">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                5× points per $1
+              </div>
+              <div class="pricing-feature">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                Free standard shipping
+              </div>
+              <div class="pricing-feature">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                Free 2-day shipping
+              </div>
+              <div class="pricing-feature">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                Early access + member drops
+              </div>
+              <div class="pricing-feature disabled">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#cbd5e1" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                Priority fulfillment (ships first)
+              </div>
+            </div>
+            <button class="btn btn-dark" style="width:100%;">Choose VIP</button>
+          </div>
+
+          <!-- Founder $99.99 -->
+          <div class="pricing-card dark">
+            <h3 class="pricing-plan-name">Founder</h3>
+            <p class="pricing-plan-desc" style="color:rgba(255,255,255,0.6);">Priority shipping + 2,500 bonus points every month.</p>
+            <div class="pricing-amount">$99.99 <span>/mo</span></div>
+            <p class="pricing-yearly" style="color:rgba(255,255,255,0.4);">$999.90 billed yearly <span class="pricing-free-badge" style="color:#34d399;">2 Months Free</span></p>
+            <div class="pricing-features">
+              <div class="pricing-feature">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                10× points per $1
+              </div>
+              <div class="pricing-feature">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                Free standard shipping
+              </div>
+              <div class="pricing-feature">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                Free 2-day shipping
+              </div>
+              <div class="pricing-feature">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                Early access + member drops
+              </div>
+              <div class="pricing-feature">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                Priority fulfillment (ships first)
+              </div>
+              <div class="pricing-feature">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                +2,500 bonus points / month
+              </div>
+              <div class="pricing-feature">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                +35,000 up front if billed yearly
+              </div>
+            </div>
+            <button class="btn btn-outline" style="width:100%;color:#fff;border-color:rgba(255,255,255,0.3);">Choose Founder</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Signup Section -->
+    <section class="membership-signup">
+      <div class="container">
+        <div class="signup-header">
+          <span class="signup-label">SIGN UP</span>
+          <h2 class="section-center-title">Start your membership</h2>
+          <p class="section-center-desc">Sign in or create your account, then enter your card. Cancel anytime, no penalty.</p>
+        </div>
+        <div class="signup-card">
+          <div class="signup-plan-header">
+            <div>
+              <span class="signup-plan-label">PLAN</span>
+              <strong>Insider · Monthly</strong>
+            </div>
+            <span class="signup-plan-price">$9.99</span>
+          </div>
+          <p class="signup-plan-info">Sign in or create your account to start your membership.</p>
+          <button class="btn btn-dark" style="width:100%;padding:14px;">Continue</button>
+          <p class="signup-note">Takes 20 seconds. We'll bring you right back here to enter your card.</p>
+          <button class="signup-change-plan">▸ Change plan or billing cycle</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- How Points Work -->
+    <section class="points-section">
+      <div class="container">
+        <span class="points-label">HOW IT WORKS</span>
+        <h2 class="section-center-title">Points are cash back.</h2>
+        <p class="section-center-desc">Every order earns points, and 100 points are worth $1 off a future order. Think of it as cash back that stacks automatically: the more you order, the more you save on what comes next.</p>
+        <div class="points-grid">
+          <div class="points-card">
+            <span class="points-card-label">EARN</span>
+            <h3 class="points-card-title">On every order</h3>
+            <p class="points-card-desc">5 to 10 points per dollar based on your tier, plus any active Double Points bonus. Points are credited to your balance when your order ships.</p>
+          </div>
+          <div class="points-card">
+            <span class="points-card-label">BONUSES</span>
+            <h3 class="points-card-title">+100 signup, +250 phone</h3>
+            <p class="points-card-desc">One-time bonuses for setting up your account so you start with points already banked.</p>
+          </div>
+          <div class="points-card" style="border-left: 3px solid #f59e0b;">
+            <span class="points-card-label" style="color:#f59e0b;">REDEEM LIKE CASH</span>
+            <h3 class="points-card-title">100 pts = $1 off</h3>
+            <p class="points-card-desc">Apply your points at cart or checkout in 100-point ($1) increments. They come off your total like store credit, and if you return an order the points come back first.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-main">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <img src="images/LogoWhite.svg" alt="Peptide" class="footer-logo">
+            <p class="footer-brand-desc">Premium research-grade peptides for controlled laboratory studies. Third-party tested with Certificate of Analysis.</p>
+            <div class="footer-social">
+              <a href="#" class="social-link" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/></svg></a>
+              <a href="#" class="social-link" aria-label="X"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+              <a href="#" class="social-link" aria-label="YouTube"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33A2.78 2.78 0 003.4 19.13C5.12 19.5 12 19.5 12 19.5s6.88 0 8.6-.46a2.78 2.78 0 001.94-1.93 29 29 0 00.46-5.25 29 29 0 00-.46-5.44z"/><polygon points="9.75,15.02 15.5,11.75 9.75,8.48"/></svg></a>
+            </div>
+          </div>
+          <div class="footer-links-col"><h4 class="footer-heading">SHOP</h4><ul class="footer-link-list"><li><a href="store.html">All Products</a></li><li><a href="subscription.html">Build a Box <span class="nav-badge-sm">NEW</span></a></li><li><a href="bundles.html">Bulk Orders <span class="nav-badge-sm">NEW</span></a></li></ul></div>
+          <div class="footer-links-col"><h4 class="footer-heading">RESOURCES</h4><ul class="footer-link-list"><li><a href="#">Certificates of Analysis</a></li></ul></div>
+          <div class="footer-links-col"><h4 class="footer-heading">SUPPORT</h4><ul class="footer-link-list"><li><a href="contact.html">Contact Us</a></li><li><a href="contact.html">FAQ</a></li><li><a href="#">Shipping Info</a></li><li><a href="#">Returns & Refunds</a></li></ul></div>
+          <div class="footer-links-col"><h4 class="footer-heading">LEGAL</h4><ul class="footer-link-list"><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms of Service</a></li><li><a href="#">Affiliate Terms</a></li><li><a href="#">Disclaimer</a></li><li><a href="#">Research Use Only</a></li></ul></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-disclaimer"><div class="container"><div class="disclaimer-header"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg><strong>FDA DISCLAIMER</strong></div><p class="disclaimer-text">Statements made regarding our products have <strong>not been evaluated by the U.S. Food and Drug Administration</strong>. These products are <strong>not intended to diagnose, treat, cure, or prevent any disease</strong>. <a href="#">Read the full disclaimer →</a></p></div></div>
+    <div class="footer-bottom"><div class="container"><div class="footer-bottom-inner"><div class="footer-payment"><span>We accept:</span><div class="payment-icons"><span class="payment-icon">VISA</span><span class="payment-icon">MC</span><span class="payment-icon">AMEX</span><span class="payment-icon">GPay</span></div></div><p class="footer-copyright">&copy; 2026 Peptide. All rights reserved. Developed by Zannatul.</p><div class="footer-trust-badges"><span class="trust-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg> SSL Secured</span><span class="trust-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg> 99%+ Purity</span><span class="trust-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Shipment Protection</span></div></div></div></div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>
+
+
